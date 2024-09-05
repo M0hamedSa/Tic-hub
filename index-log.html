@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <title>TIC</title>
+</head>
+<body>
+
+<nav class="navb" id="navb">
+        <a href="index-log.html"><img src="assets/tick-logo.png" alt="logo" class="tick-logo"></a>
+        <ul class="nav-ul" id="nav-ul">
+            <li class="nav-li "><a href="events.html">الأقسام</a></li>
+            <li class="nav-li "><a href="knowUs.html">تعرف علينا</a></li>
+            <li class="nav-li "><a href="contactUs.html">تواصل معنا</a></li>
+            <a class="lang" href="">EN</a>
+        </ul>
+
+        <form action="" class="search-bar">
+            <input type="text" placeholder="ابحث هنا ....">
+            <button class="search-btn" type="submit"><img src="assets/search-icon.png"></button>
+        </form>
+
+        <form class="sell-btn" onclick="showSellForm()">
+        <i class="fa fa-ticket" style="padding-left:10px"></i>
+        <input type="button" value="بيع تذكرت" >
+        </form>
+        <div class="user">
+            <img src="assets/person-icon.png" alt="">
+            <p>محمد محمود</p>
+            <i class="fa-solid fa-caret-down fa-xl" id="ic" style="color: #ffffff; margin-right: 0px; cursor: pointer; z-index: 2;"  onclick="changeIcon(this.id)"></i>
+        </div>
+        <div class="d-menu">
+        <form class="menu-inner" onclick="window.location.href='myAcc.html';">
+            <i class="fa-solid fa-user fa-xl" style="color: #ED8A19;"></i>
+            <p style="color: #ED8A19;">حسابي</p>
+            <i class="fa-solid fa-chevron-left fa-xl" style="color: #ED8A19;"></i>
+        </form>
+
+        <form class="menu-inner" onclick="window.location.href='myTickets.html';">
+        <i class="fa-solid fa-ticket fa-xl" style="color: #5F22D9;"></i>
+        <p style="color: #5F22D9;">تذاكري</p>
+        <i class="fa-solid fa-chevron-left fa-xl" style="color: #5F22D9;"></i>
+        </form>
+
+        <form class="menu-inner" onclick="window.location.href='myWallet.html';">
+        <i class="fa-solid fa-wallet fa-xl" style="color: #47B574;"></i>
+        <p style="color: #47B574;">محفظتي</p>
+        <i class="fa-solid fa-chevron-left fa-xl" style="color: #47B574;"></i>
+        </form>
+        <input type="button" value="تسجيل الخروج" style="cursor: pointer; " window.location.href='index.html';>
+        </div>
+</nav>
+
+
+<nav class="navb-m">
+    <a href="index.html"><img src="assets/tick-logo.png" alt="logo" class="tick-logo"></a>
+    <form action="" class="search-bar">
+        <input type="text" placeholder="ابحث هنا ....">
+        <button class="search-btn" type="submit"><img src="assets/search-icon.png"></button>
+    </form>
+    <i class="fa-solid fa-bars fa-xl" style="color: #AD72FE;" onclick="showNavbM()"></i>
+</nav>
+
+<div class="navb-m-ol">
+    <div style="display: flex; flex-direction: row; margin:64px auto 100px auto; align-items: center; height:50px; gap: 20px;">
+    <i class="fa-solid fa-x fa-xl" style="color: #c92b28; margin-left: 30px;" onclick="closeNavbM()"></i>
+    <div class="user">
+        <img src="assets/person-icon.png" alt="">
+        <p>محمد محمود</p>
+        <i class="fa-solid fa-caret-down fa-xl" id="ic2" style="color: #5F22D9; margin-right: 0px; cursor: pointer; z-index: 2;"  onclick="changeIcon(this.id)"></i>
+    </div>
+    <div class="d-menu">
+    <form class="menu-inner" onclick="window.location.href='myAcc.html';">
+        <i class="fa-solid fa-user fa-xl" style="color: #ED8A19;"></i>
+        <p style="color: #ED8A19;">حسابي</p>
+        <i class="fa-solid fa-chevron-left fa-xl" style="color: #ED8A19;"></i>
+    </form>
+
+    <form class="menu-inner" onclick="window.location.href='myTickets.html';">
+    <i class="fa-solid fa-ticket fa-xl" style="color: #5F22D9;"></i>
+    <p style="color: #5F22D9;">تذاكري</p>
+    <i class="fa-solid fa-chevron-left fa-xl" style="color: #5F22D9;"></i>
+    </form>
+
+    <form class="menu-inner" onclick="window.location.href='myWallet.html';">
+    <i class="fa-solid fa-wallet fa-xl" style="color: #47B574;"></i>
+    <p style="color: #47B574;">محفظتي</p>
+    <i class="fa-solid fa-chevron-left fa-xl" style="color: #47B574;"></i>
+    </form>
+    <input type="button" value="تسجيل الخروج" style="cursor: pointer; " window.location.href='index.html';>
+    </div>
+    </div>
+    <ul class="nav-ul" id="nav-ul" >
+        <li class="nav-li "><a href="events.html">الأقسام</a></li>
+        <li class="nav-li "><a href="knowUs.html">تعرف علينا</a></li>
+        <li class="nav-li "><a href="contactUs.html">تواصل معنا</a></li>
+        <a class="lang" href="#">EN</a>
+        <form class="sell-btn" onclick="showSellForm()">
+            <i class="fa fa-ticket" style="padding-left:10px"></i>
+            <input type="button" value="بيع تذكرت" >
+            </form>
+    </ul>
+</div>
+
+
+
+
+
+
+
+<div class="overlay2" onclick="closeDiv()"></div>
+<div class="overlay" onclick="closeModal()"></div>
+<div class="overlay6" onclick="overlay6()"></div>
+
+
+
+<div class="buy-form" >
+<div class="b-f-1" style="width: 60%; background-color: #ffff; height: 100%;border-radius: 0px 16px 16px 0px;">
+    <div class="b-f-2" style="display: flex; flex-direction: column; width: 640px;margin: auto; padding-top: 80px;">
+    <h1 style="font-size: 26.7px; font-weight: 600;">شراء التذكرة</h1>
+
+<form action="" class="buy-inner">
+    <div class="b-f-3" style="display: flex; margin-top: 60px; justify-content: space-between; border-bottom: 1px solid #E4E4E4; padding-bottom: 40px;">
+        <img src="assets/m-e.png" alt="" style="width: 150px; height: 130px; border-radius: 12px;">
+        <div class="b-f-4" style="margin-right: 30px; ">
+            <p class="f-p-1" style="font-size: 26.7px; font-weight: 600; ">ديفيد جيتا</p>
+            <div class="card-loc" style="color: #707070; margin: 30px 0px 15px 5px;"><i class="fa-solid fa-location-dot fa-lg" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <ul style="display: flex; list-style: none;">
+                <li><div class="date" style="margin-left: 10px;"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></li>
+                <li><input type="text" value="متجاورة" style="width: 84px; height: 30px; border: none; color: #ffff; background-color: #47B574; font-size: 13px; text-align: center; border-radius: 5px;"></li>
+                <li><input type="text" value="صف 116" style="width: 84px; height: 30px; border: none; color: #ffff; background-color: #5F22D9; font-size: 13px; text-align: center; border-radius: 5px;"></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bot-cont">
+        <h1 style="font-size: 26.7px; font-weight:600; margin-top: 50px;">اختر المقعد</h1>
+        <ul class="seatUl">
+            <li><input type="button" value="مقعد 2" id="seat1" class="seatLi" onclick="activeLi('seat1')"></li>
+            <li><input type="button" value="مقعد 3" id="seat2" class="seatLi" onclick="activeLi('seat2')"></li>
+            <li><input type="button" value="مقعد 4" id="seat3" class="seatLi" onclick="activeLi('seat3')"></li>
+        </ul>
+    </div>
+    <div class="checkbox-wrapper-13" style="display: flex; gap: 17px; width: 100%;">
+        <input type="checkbox" id="c1-13">
+        <p style="margin-bottom: 40px;">أنا أوافق على <a class="link-hov" href="" style="color: #D83F87; text-decoration: none;">شروط واحكام البيع والشراء</a> و <a href="" style="color: #D83F87; text-decoration: none;" >اوافق على عرض التذاكر بالموقع</a></p> 
+    </div>
+    <input type="button" name="" id="" value="يلا ندفع" style="width: 520px; height: 55px; text-align: center; align-items: center; margin: auto; border-radius: 8px; border: none; background-color: #5F22D9; color: #ffff; font-size: 17px; font-weight: 600; margin-top: 50px; cursor: pointer;">
+</form>
+
+
+</div>
+
+</div>
+
+
+<div class="login-card-L" style="width: 40%; border-radius: 16px 0px 0px 16px;padding: 60px 60px 0px 60px;display: flex;justify-content: flex-start;flex-direction: column;position: relative;height: 100%;gap: 241px;">
+
+<div class="slider-wrapper" style="height: 320px;">
+<div class="slider-inner" id="box">
+        <div class="slider-item" >
+            <div class="user-card" style="padding: 0px 20px 0px 20px; height: 310px;">
+                <div style="display: flex; flex-direction: column; gap:30px; align-items: center">
+                <img  style="width: 100px; height:100px;" src="assets/ticket.png">
+                <h1 style="color: #ffff; font-size: 32.2px; font-weight: 500;">أختر تذكرتك</h1>
+                <p style="color: #ffff; font-size: 19.5px; font-weight: 500; text-align: center;">حدد التذكرة التي تريد شراءها والمقعد الذي يناسبك</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-item">
+            <div class="user-card" style="padding: 0px 20px 0px 20px; height: 310px;">
+                <div style="display: flex; flex-direction: column; gap:30px; align-items: center">
+                <img  style="width: 100px; height:100px;" src="assets/ticket.png">
+                <h1 style="color: #ffff; font-size: 32.2px; font-weight: 500;">أختر تذكرتك</h1>
+                <p style="color: #ffff; font-size: 19.5px; font-weight: 500; text-align: center;">حدد التذكرة التي تريد شراءها والمقعد الذي يناسبك</p>
+                </div>
+            </div>
+        </div>        
+        <div class="slider-item" >
+            <div class="user-card" style="padding: 0px 20px 0px 20px; height: 310px;">
+                <div style="display: flex; flex-direction: column; gap:30px; align-items: center">
+                <img  style="width: 100px; height:100px;" src="assets/ticket.png">
+                <h1 style="color: #ffff; font-size: 32.2px; font-weight: 500;">أختر تذكرتك</h1>
+                <p style="color: #ffff; font-size: 19.5px; font-weight: 500; text-align: center;">حدد التذكرة التي تريد شراءها والمقعد الذي يناسبك</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+<button class="next"  style="display: none;">
+</button>
+<button class="prev" style="display: none;">
+</button>
+</div>
+
+<div>
+    <ul class="dots" >
+        <li class="li0"></li>
+        <li class="li1"></li>
+        <li class="li2 active"></li>
+    </ul>
+</div>
+
+<div class="b-f-footer">
+    <p style="font-size: 19.5px; font-weight: 500; color: #9C9C9C; text-align: center; border-top: 1px solid #9C9C9C; padding-top: 60px;">ولان راحتك تهمنا احنا في تك هب قدرنا نوفر أكثر من وسيلة دفع تقدر تشتري بيها التذاكر الخاصة بيك عشان نوفر عليك الوقت والمجهود عشان تقدر تستمتع بوقتك</p>
+    <div class="b-f-f-svg" style="display: flex; gap: 40px; justify-content: center; margin-top: 50px;">
+        <svg id="visa-dark-large" xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 48 32">
+            <rect id="card_bg" width="48" height="32" rx="4" fill="#212b36"/>
+            <path id="visa-logo" d="M17.014,9.52a7.127,7.127,0,0,1-2.6-.491l.43-2a5.019,5.019,0,0,0,2.377.6h.063c.712-.01,1.43-.3,1.43-.91.01-.392-.326-.7-1.24-1.15-.9-.439-2.09-1.176-2.09-2.51,0-1.8,1.645-3.06,4-3.06a6.414,6.414,0,0,1,2.24.41l-.419,2a4.512,4.512,0,0,0-1.92-.432c-.147,0-.295.007-.441.022-.691.091-1,.453-1,.77,0,.388.5.647,1.123.975,1,.521,2.234,1.17,2.227,2.695l.05-.08c-.01,1.92-1.647,3.16-4.17,3.16Zm6.626-.08H21.12L24.71.87a1.087,1.087,0,0,1,1-.68h2l1.939,9.249H27.43l-.29-1.38H24.13l-.49,1.38ZM26.02,2.69,24.76,6.16h1.99ZM12.7,9.41H10.3l2-9.25h2.4l-2,9.249ZM7.45,9.38H4.84L2.93,1.99a1,1,0,0,0-.571-.81A9.917,9.917,0,0,0,0,.4L.06.13H4.13a1.118,1.118,0,0,1,1.11.941l1,5.35L8.73.13h2.6L7.45,9.379Z" transform="translate(9.16 11.23)" fill="#fff"/>
+        </svg>
+
+        <svg id="mastercard-dark-large" xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 48 32">
+            <rect id="card_bg" width="48" height="32" rx="4" fill="#212b36"/>
+            <g id="mastercard" transform="translate(4 3)">
+              <g id="Group" opacity="0">
+                <rect id="Rectangle" width="38.71" height="25.6" transform="translate(0.65 0.2)" fill="#fff"/>
+              </g>
+              <rect id="Rectangle-2" data-name="Rectangle" width="10.21" height="16.68" transform="translate(14.9 4.66)" fill="#f26122"/>
+              <path id="Path" d="M13.169,10.61a10.58,10.58,0,0,1,4-8.34,10.61,10.61,0,1,0,0,16.68A10.58,10.58,0,0,1,13.169,10.61Z" transform="translate(2.831 2.39)" fill="#ea1d25"/>
+              <path id="Shape" d="M.5.411H.43V0h.1L.66.29.78,0h.1V.409H.81V.1L.7.37H.62L.5.1V.41ZM.2.41H.14V.07H0V0H.35V.07H.2V.409Z" transform="translate(35.94 19.16)" fill="#f69e1e"/>
+              <path id="Path-2" data-name="Path" d="M17.16,10.6A10.61,10.61,0,0,1,0,18.943,10.61,10.61,0,0,0,1.78,4.053,10.4,10.4,0,0,0,0,2.263,10.61,10.61,0,0,1,17.16,10.6Z" transform="translate(20 2.397)" fill="#f69e1e"/>
+            </g>
+        </svg>
+        
+        <svg id="maestro-dark-large" xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 48 32">
+  <rect id="card_bg" width="48" height="32" rx="4" fill="#212b36"/>
+  <g id="maestro" transform="translate(4 3)">
+    <g id="Group" opacity="0">
+      <rect id="Rectangle" width="38.71" height="25.6" transform="translate(0.65 0.2)" fill="#fff"/>
+    </g>
+    <rect id="Rectangle-2" data-name="Rectangle" width="10.21" height="16.68" transform="translate(14.9 4.66)" fill="#7272b5"/>
+    <path id="Path" d="M13.169,10.61a10.58,10.58,0,0,1,4-8.34,10.61,10.61,0,1,0,0,16.68A10.58,10.58,0,0,1,13.169,10.61Z" transform="translate(2.831 2.39)" fill="#ed1c24"/>
+    <path id="Shape" d="M.5.411H.43V0h.1L.66.29.78,0h.1V.409H.81V.1L.7.37H.62L.5.1V.41ZM.2.41H.14V.07H0V0H.35V.07H.2V.409Z" transform="translate(35.94 19.16)" fill="#00a1de"/>
+    <path id="Path-2" data-name="Path" d="M17.16,10.6A10.61,10.61,0,0,1,0,18.943,10.61,10.61,0,0,0,1.78,4.053,10.4,10.4,0,0,0,0,2.263,10.61,10.61,0,0,1,17.16,10.6Z" transform="translate(20 2.397)" fill="#00a1de"/>
+  </g>
+        </svg>
+        
+        <svg id="paypal-dark-large" xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 48 32">
+            <rect id="card_bg" width="48" height="32" rx="4" fill="#212b36"/>
+            <g id="paypal" transform="translate(15 6)">
+              <path id="Path" d="M4.11,18.64l.35-2.2H0L2.56.18A.21.21,0,0,1,2.63.05.24.24,0,0,1,2.77,0H8.98c2.07,0,3.49.43,4.24,1.28a2.75,2.75,0,0,1,.67,1.27,4.42,4.42,0,0,1,0,1.75v.5l.35.2a2.49,2.49,0,0,1,.71.53,2.59,2.59,0,0,1,.57,1.29,5.73,5.73,0,0,1-.08,1.86,6.48,6.48,0,0,1-.77,2.11,4.3,4.3,0,0,1-1.21,1.33,5.06,5.06,0,0,1-1.63.73,7.91,7.91,0,0,1-2,.24H9.34a1.47,1.47,0,0,0-.94.34,1.42,1.42,0,0,0-.49.88v.2L7.3,18.39v.15a.15.15,0,0,1,0,.08H7.24Z" transform="translate(1.23 0.68)" fill="#253d80"/>
+              <path id="Path-2" data-name="Path" d="M11.175,0l-.06.37c-.82,4.2-3.63,5.66-7.21,5.66H2.085a.89.89,0,0,0-.88.75L.275,12.7l-.27,1.68a.47.47,0,0,0,.46.54h3.24a.78.78,0,0,0,.77-.66V14.1l.61-3.87v-.21a.77.77,0,0,1,.76-.66h.53c3.13,0,5.59-1.27,6.3-5a4.24,4.24,0,0,0-.64-3.73,3.23,3.23,0,0,0-.86-.63Z" transform="translate(4.625 5.08)" fill="#189bd7"/>
+              <path id="Path-3" data-name="Path" d="M9.04.291l-.38-.1L8.24.111A10.06,10.06,0,0,0,6.64,0H1.76a.72.72,0,0,0-.33.07A.76.76,0,0,0,1,.651L0,7.221v.19a.89.89,0,0,1,.88-.75H2.7C6.28,6.661,9.09,5.2,9.91,1l.06-.37A4.48,4.48,0,0,0,9.3.351Z" transform="translate(5.9 4.449)" fill="#242e65"/>
+              <path id="Path-4" data-name="Path" d="M6.376,5.1a.76.76,0,0,1,.43-.58.72.72,0,0,1,.33-.07h4.88a10.06,10.06,0,0,1,1.6.11l.42.08.38.1.19.06a4.48,4.48,0,0,1,.67.28,4,4,0,0,0-.8-3.57C13.476.45,11.836,0,9.7,0H3.476A.89.89,0,0,0,2.6.75L.006,17.16a.54.54,0,0,0,.53.62h3.84l1-6.11Z" transform="translate(0.524 0)" fill="#253d80"/>
+            </g>
+        </svg>
+
+        <svg id="discover-dark-large" xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 48 32">
+            <path id="card_bg" d="M48,4V28a4,4,0,0,1-4,4H4a3.81,3.81,0,0,1-1.36-.24A4,4,0,0,1,0,28V4A4,4,0,0,1,4,0H44A4,4,0,0,1,48,4Z" fill="#212b36"/>
+            <g id="discover" transform="translate(2 10)">
+              <path id="Path" d="M46,0V11.965A4.046,4.046,0,0,1,41.944,16H1.379A3.882,3.882,0,0,1,0,15.758c3.407-.484,6.693-1.09,9.918-1.776.852-.161,1.683-.363,2.515-.545C25.84,10.391,37.441,5.912,43.972,1.513,44.7,1.009,45.392.5,46,0Z" transform="translate(0 6)" fill="#ee7623"/>
+              <path id="Shape" d="M2.019,6.414c-.066,0-.133,0-.2-.006H0V.049H1.82V.008C1.9,0,1.981,0,2.053,0A3.22,3.22,0,0,1,4.12,5.688,3.422,3.422,0,0,1,2.019,6.414ZM1.26,1.129v4.28h.32c.067.006.135.009.2.009A2.307,2.307,0,0,0,3.3,4.848a2.14,2.14,0,0,0,.7-1.6,2.106,2.106,0,0,0-.7-1.6,2.334,2.334,0,0,0-1.72-.52Z" transform="translate(2 0.592)" fill="#fff"/>
+              <rect id="Rectangle" width="1.25" height="6.42" transform="translate(7.85 0.63)" fill="#fff"/>
+              <path id="Path-2" data-name="Path" d="M2.65,2.574c-.75-.27-1-.46-1-.81a.856.856,0,0,1,.93-.71,1.33,1.33,0,0,1,1,.52l.65-.85A2.75,2.75,0,0,0,2.35,0a1.88,1.88,0,0,0-2,1.84c0,.89.4,1.34,1.57,1.76a5.14,5.14,0,0,1,.87.37.76.76,0,0,1,.38.66.92.92,0,0,1-1,.91,1.48,1.48,0,0,1-1.36-.86L0,5.464a2.49,2.49,0,0,0,2.28,1.22,2.06,2.06,0,0,0,2.2-2.1C4.48,3.564,4.07,3.094,2.65,2.574Z" transform="translate(9.52 0.516)" fill="#fff"/>
+              <path id="Path-3" data-name="Path" d="M0,3.36A3.32,3.32,0,0,0,3.39,6.71a3.43,3.43,0,0,0,1.57-.37V4.87a2,2,0,0,1-1.51.7A2.11,2.11,0,0,1,1.29,3.35a2.13,2.13,0,0,1,2.1-2.2,2.09,2.09,0,0,1,1.57.72V.4A3.19,3.19,0,0,0,3.42,0,3.38,3.38,0,0,0,0,3.36Z" transform="translate(14.41 0.48)" fill="#fff"/>
+              <path id="Path-4" data-name="Path" d="M3.08,4.31,1.36,0H0L2.72,6.58h.67L6.17,0H4.81L3.08,4.31Z" transform="translate(26.22 0.63)" fill="#fff"/>
+              <path id="Path-5" data-name="Path" d="M0,6.42H3.56V5.33H1.25V3.6H3.47V2.51H1.25V1.09H3.56V0H0V6.42Z" transform="translate(32.95 0.63)" fill="#fff"/>
+              <path id="Shape-2" data-name="Shape" d="M1.26,6.361H0V0H1.84C3.289,0,4.12.685,4.12,1.88A1.738,1.738,0,0,1,2.66,3.72l2,2.639-1.519,0L1.4,3.82H1.26V6.36ZM1.26,1V2.94h.4c.795,0,1.181-.308,1.181-.94,0-.663-.4-1-1.181-1Z" transform="translate(37.34 0.64)" fill="#fff"/>
+              <path id="Path-6" data-name="Path" d="M6.82,3.41A3.41,3.41,0,1,1,3.41,0,3.41,3.41,0,0,1,6.82,3.41Z" transform="translate(19.77 0.43)" fill="#ee7623"/>
+              <path id="Shape-3" data-name="Shape" d="M.14.581H0V0H.2C.344,0,.42.062.42.18A.152.152,0,0,1,.3.32L.479.578.32.58.14.34V.58Z" transform="translate(41.7 0.58)" fill="#fff"/>
+              <path id="Shape-4" data-name="Shape" d="M.5,1A.5.5,0,0,1,.48,0H.5a.5.5,0,0,1,.347.14A.5.5,0,0,1,.5,1ZM.48.121A.38.38,0,0,0,.1.5a.391.391,0,0,0,.38.42H.488A.319.319,0,0,0,.74.8.457.457,0,0,0,.86.5.381.381,0,0,0,.48.121Z" transform="translate(41.46 0.36)" fill="#fff"/>
+            </g>
+        </svg>
+        
+        <svg id="dinnerclub-dark-large" xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 48 32">
+            <rect id="card_bg" width="48" height="32" rx="4" fill="#212b36"/>
+            <g id="dinner_club" transform="translate(8 4)">
+              <path id="Shape" d="M1.81,4.561H0v-.17l.026,0c.376-.038.564-.057.564-.5V.742C.59.181.29.181,0,.181V.012H1.89C1.967,0,2.045,0,2.122,0A2.38,2.38,0,0,1,4.5,2.291C4.5,2.524,4.425,4.561,1.81,4.561ZM1.485.244c-.085,0-.17,0-.255.007L1.19,3.792c0,.493.344.56.68.56h.068a1.81,1.81,0,0,0,1.8-2,2,2,0,0,0-2-2.1C1.655.246,1.569.244,1.485.244Z" transform="translate(0.63 14.439)" fill="#fff"/>
+              <path id="Path" d="M1.36,2.987v-.17H1.25c-.19,0-.33,0-.33-.22V.007a.27.27,0,0,0-.12,0,6.8,6.8,0,0,1-.7.24v.1c.24.13.34.17.34.46v1.76c0,.22-.13.22-.31.22H0v.2H1.36Z" transform="translate(5.39 16.013)" fill="#fff"/>
+              <path id="Path-2" data-name="Path" d="M.5.82A.32.32,0,1,0,.18.5.32.32,0,0,0,.5.82Z" transform="translate(5.55 14.24)" fill="#fff"/>
+              <path id="Path-3" data-name="Path" d="M3.22,2.78H3.11c-.19,0-.33,0-.33-.22V.91c0-.5-.19-.91-.75-.91A1.88,1.88,0,0,0,.91.49V0A8.31,8.31,0,0,1,.05.31V.44c.3.12.38.19.38.43h0V2.59c0,.22-.13.22-.32.22H0v.1H1.39V2.74H1.27c-.18,0-.32,0-.32-.22V.64A1.63,1.63,0,0,1,1.7.32a.53.53,0,0,1,.6.56V2.56c0,.22-.13.22-.31.22H1.87v.13H3.22Z" transform="translate(6.98 16.09)" fill="#fff"/>
+              <path id="Shape-2" data-name="Shape" d="M1.281,3.025h0a1.318,1.318,0,0,1-.924-.411A1.3,1.3,0,0,1,0,1.665C0,.3.947.005,1.311.005a1,1,0,0,1,1.1,1v.12H.521a2.234,2.234,0,0,0,0,.38,1.076,1.076,0,0,0,1,1.12A1.266,1.266,0,0,0,2.4,2.2l.09.09A1.531,1.531,0,0,1,1.281,3.025ZM1.292.155h.02C.928.164.661.44.581.915h1.08c.18,0,.18-.081.18-.16a.55.55,0,0,0-.529-.6h-.02Z" transform="translate(10.139 16.115)" fill="#fff"/>
+              <path id="Path-4" data-name="Path" d="M.18,2.811H0v.13H1.69v-.17H1.33c-.19,0-.32,0-.32-.22V1.061a.55.55,0,0,1,.48-.54c.23,0,.23.16.43.16a.31.31,0,0,0,.3-.33A.35.35,0,0,0,1.85,0c-.39,0-.67.42-.83.67h0V.091c0-.07,0-.09-.06-.09s-.32.17-.8.37v.1c.1,0,.34.09.34.29v1.83C.49,2.811.36,2.811.18,2.811Z" transform="translate(12.74 16.059)" fill="#fff"/>
+              <path id="Path-5" data-name="Path" d="M.94,2.917a.87.87,0,0,1-.82-.8H0l.08.74a1.68,1.68,0,0,0,.79.23c.77,0,1.12-.46,1.12-.89,0-1-1.51-.79-1.51-1.55A.46.46,0,0,1,.99.217a.68.68,0,0,1,.71.64h.17L1.82.2a1.69,1.69,0,0,0-.74-.19.89.89,0,0,0-1,.84c0,1,1.42.8,1.42,1.57a.47.47,0,0,1-.56.5Z" transform="translate(15.13 16.013)" fill="#fff"/>
+              <path id="Path-6" data-name="Path" d="M3.934,4.361l.15-.95h-.15a1.33,1.33,0,0,1-1.31,1.13,2.12,2.12,0,0,1-1.94-2.26A1.85,1.85,0,0,1,2.514.211a1.25,1.25,0,0,1,1.4,1.07h.16L4,.351A4.6,4.6,0,0,0,2.474,0,2.4,2.4,0,0,0,0,2.3a2.32,2.32,0,0,0,2.49,2.45,3.68,3.68,0,0,0,1.44-.39Z" transform="translate(18.926 14.429)" fill="#fff"/>
+              <path id="Path-7" data-name="Path" d="M1.35,4.98V4.81H1.24c-.19,0-.33,0-.33-.22V0A.217.217,0,0,0,.77.07,3.76,3.76,0,0,1,.1.35V.46C.34.53.44.54.44.97V4.59c0,.22-.13.22-.31.22H0v.17H1.35Z" transform="translate(23.28 14.02)" fill="#fff"/>
+              <path id="Path-8" data-name="Path" d="M.31.53V2.2a.7.7,0,0,0,.71.78,1.76,1.76,0,0,0,1.16-.55v.53h0a6.84,6.84,0,0,1,.94-.21V2.64H2.91c-.11,0-.19,0-.19-.12V0s-.43.05-1,.09V.21c.23.06.54.13.54.26V2.23a1.47,1.47,0,0,1-.78.39c-.57,0-.57-.56-.57-.75V.19C.91.05.91,0,.84,0L0,.05V.17C.31.2.31.36.31.53Z" transform="translate(24.69 16.16)" fill="#fff"/>
+              <path id="Shape-3" data-name="Shape" d="M1.52,5.09h0a1.922,1.922,0,0,1-.9-.23l-.2.15L.29,4.94a7.558,7.558,0,0,0,.09-1.2V.94C.38.554.284.531.03.467L0,.46V.35A3.21,3.21,0,0,0,.67.07L.82,0C.87,0,.87.089.87.09V2.48a1.657,1.657,0,0,1,1-.471A1.271,1.271,0,0,1,3.08,3.38,1.657,1.657,0,0,1,1.52,5.09Zm0-2.77a1,1,0,0,0-.62.31L.85,4.21a.7.7,0,0,0,.671.67c.687,0,1-.658,1-1.27a1.243,1.243,0,0,0-1-1.29Z" transform="translate(27.81 14.06)" fill="#fff"/>
+              <path id="Path-9" data-name="Path" d="M.54.02H.02V.16H.09C.22.16.33.16.34.35V2.2c0,.18-.12.19-.25.19H0v.17H1.08V2.43H1.05c-.13,0-.25,0-.25-.19V.33C.8.15.92.14,1.05.14h.07V0h0Z" transform="translate(0.6 20.44)" fill="#fff"/>
+              <path id="Path-10" data-name="Path" d="M2.43.03h-.5V.17h.09c.11,0,.29,0,.3.32v1.3L.76.04H.02V.18H.08a.3.3,0,0,1,.31.3v1.5c0,.28-.07.43-.31.43H0v.16H.94V2.44H.86c-.26,0-.31-.09-.32-.4V.57l1.8,2h.17v-2c0-.41.16-.43.3-.43h.07V0h0Z" transform="translate(1.82 20.43)" fill="#fff"/>
+              <path id="Path-11" data-name="Path" d="M2.32,0h0c0,.09-.08.09-.18.09H.29C.2.09.14.09.11,0H0A2.64,2.64,0,0,1,0,.29v.3H.14C.2.33.2.28.46.28h.56V2.16c0,.27-.08.27-.28.28H.66v.23H1.83V2.54H1.75c-.17,0-.28,0-.28-.29V.32h.56c.23,0,.24.19.25.33h0L2.41.6h0V.02h-.1Z" transform="translate(4.83 20.33)" fill="#fff"/>
+              <path id="Path-12" data-name="Path" d="M1.91,1.85h0c-.1.4-.28.42-.7.42-.23,0-.42,0-.42-.22V1.24H1.2c.24,0,.24.13.26.34h.13V.76H1.45c0,.19-.06.29-.26.3H.78V.16h.48c.36,0,.39.17.41.4h.12V0H0V.14H.06C.19.14.3.14.31.33V2.18c0,.18-.12.19-.25.19H0v.16H1.94a2.959,2.959,0,0,1,.12-.56H1.95Z" transform="translate(7.36 20.47)" fill="#fff"/>
+              <path id="Shape-4" data-name="Shape" d="M1.12,2.561H0V2.37H.08c.146,0,.24-.071.24-.18V.39C.32.14.187.14.08.14H0V0H1.12c.571,0,.86.215.86.64a.667.667,0,0,1-.49.63l.6.89a.371.371,0,0,0,.356.27H2.46v.128L2.07,2.5H1.73A9.794,9.794,0,0,1,.99,1.36H.78v.8c.01.27.112.27.28.27H1.12v.13ZM.77.2v1H.93c.318,0,.53-.092.53-.54A.46.46,0,0,0,1,.2L.96.2Z" transform="translate(9.54 20.44)" fill="#fff"/>
+              <path id="Path-13" data-name="Path" d="M2.87.14V0H1.93V.14h.09c.11,0,.29,0,.3.32v1.3L.74.01H0V.15H.06a.3.3,0,0,1,.31.3V1.94c0,.29-.07.44-.31.44H0v.18H.94V2.43H.86c-.26,0-.31-.09-.31-.4V.56l1.79,2h.17v-2c0-.41.16-.43.3-.43h.07Z" transform="translate(12.06 20.44)" fill="#fff"/>
+              <path id="Shape-5" data-name="Shape" d="M.81,2.631H0V2.45a.314.314,0,0,0,.3-.22L.86.6A3.435,3.435,0,0,0,1,.15,1.441,1.441,0,0,0,1.33,0V.09l.65,1.86c.013.031.028.062.042.093a.693.693,0,0,1,.087.267.22.22,0,0,0,.111.19.224.224,0,0,0,.11.029A.221.221,0,0,0,2.44,2.5v.129H1.42V2.5h.05c.1,0,.211-.024.211-.09a1.092,1.092,0,0,0-.07-.25l-.14-.4H.69L.58,2.12A2.169,2.169,0,0,0,.5,2.39a.1.1,0,0,0,.083.1A.651.651,0,0,0,.75,2.5H.81v.13ZM.98.52.67,1.47h.62Z" transform="translate(15.02 20.37)" fill="#fff"/>
+              <path id="Path-14" data-name="Path" d="M2.32,0h0c0,.09-.08.09-.18.09H.3C.21.09.14.09.12,0H0A1.37,1.37,0,0,1,0,.29V.6H.14C.19.34.19.29.45.29h.57V2.17c0,.27-.09.27-.28.28H.65v.22H1.83V2.54H1.75c-.17,0-.28,0-.28-.29V.32h.57c.22,0,.23.19.24.33h0L2.41.6h0a2.71,2.71,0,0,1,0-.29V.02h-.1Z" transform="translate(17.14 20.33)" fill="#fff"/>
+              <path id="Path-15" data-name="Path" d="M.53.02H0V.16H.06C.19.16.31.16.31.35V2.2c0,.18-.12.19-.25.19H0v.17H1.08V2.43H1.01c-.13,0-.24,0-.24-.19V.33c0-.18.11-.19.24-.19h.07V0h0Z" transform="translate(19.69 20.44)" fill="#fff"/>
+              <path id="Shape-6" data-name="Shape" d="M1.269,2.617A1.269,1.269,0,0,1,0,1.326,1.317,1.317,0,0,1,.383.39,1.3,1.3,0,0,1,1.31.005h.01C1.36,0,1.4,0,1.439,0A1.261,1.261,0,0,1,2.7,1.246a1.318,1.318,0,0,1-1.318,1.37H1.34ZM1.32.2C.587.2.53.969.53,1.206c0,.809.286,1.22.85,1.22.531,0,.789-.36.789-1.1C2.17.778,1.872.2,1.32.2Z" transform="translate(20.86 20.384)" fill="#fff"/>
+              <path id="Path-16" data-name="Path" d="M2.84.14V0H1.91V.14H2c.1,0,.29,0,.29.32v1.3L.73.01H0V.15H.06a.29.29,0,0,1,.3.3v1.5c0,.28-.07.43-.3.43H0v.18H.94V2.43H.87c-.27,0-.31-.09-.32-.4V.56l1.79,2H2.5a2,2,0,0,1,0-.35V.56c0-.41.15-.43.3-.43h.07Z" transform="translate(23.66 20.44)" fill="#fff"/>
+              <path id="Shape-7" data-name="Shape" d="M.81,2.631H0V2.45a.308.308,0,0,0,.29-.22L.86.6A3.436,3.436,0,0,0,1,.15,1.626,1.626,0,0,0,1.32,0V.09l.65,1.86c.035.115.078.236.13.36a.21.21,0,0,0,.211.2A.21.21,0,0,0,2.37,2.5v.129H1.35V2.5H1.4c.092,0,.2-.024.2-.09a1.222,1.222,0,0,0-.07-.25l-.13-.4H.75l-.11.36a1.217,1.217,0,0,0-.08.27.1.1,0,0,0,.081.1A.655.655,0,0,0,.81,2.5v.13ZM.97.52.65,1.47h.62Z" transform="translate(26.6 20.37)" fill="#fff"/>
+              <path id="Path-17" data-name="Path" d="M1.87,1.87h0a.77.77,0,0,1-.11.25.51.51,0,0,1-.33.18H.97a.176.176,0,0,1-.2-.19V.32C.77.14.86.14.99.14H1.1V0H0V.14H.06C.19.14.31.14.31.33V2.15c0,.21-.12.22-.25.22H0v.19H1.87A3.221,3.221,0,0,1,2,1.96H1.87Z" transform="translate(29.13 20.44)" fill="#fff"/>
+              <path id="Shape-8" data-name="Shape" d="M.31.38H.24C.214.38.192.346.161.3.144.272.125.241.1.21V.33H0V0H.19C.272,0,.32.037.32.1A.11.11,0,0,1,.23.21V.29L.308.378Z" transform="translate(30.84 20.53)" fill="#fff"/>
+              <path id="Shape-9" data-name="Shape" d="M.37.741A.37.37,0,0,1,.36,0H.382A.355.355,0,0,1,.631.1.359.359,0,0,1,.74.371a.371.371,0,0,1-.366.37ZM.36.041a.3.3,0,1,0,.3.3A.3.3,0,0,0,.36.041Z" transform="translate(30.64 20.359)" fill="#fff"/>
+              <g id="mark" transform="translate(8)">
+                <path id="Path-18" data-name="Path" d="M9.342,12.592a6.55,6.55,0,0,0,6.58-6.24A6.43,6.43,0,0,0,9.342,0h-3A6.2,6.2,0,0,0,0,6.352a6.31,6.31,0,0,0,6.34,6.24Z" transform="translate(0.018 0.998)" fill="#0779be"/>
+                <path id="Shape-10" data-name="Shape" d="M5.76,11.52a5.76,5.76,0,1,1,5.76-5.76A5.767,5.767,0,0,1,5.76,11.52Zm1.3-9.17V9.17a3.65,3.65,0,0,0,0-6.82Zm-2.61,0a3.655,3.655,0,0,0,0,6.82Z" transform="translate(0.66 1.52)" fill="#fff"/>
+                <path id="Path-19" data-name="Path" d="M9.342,12.592a6.55,6.55,0,0,0,6.58-6.24A6.43,6.43,0,0,0,9.342,0h-3A6.2,6.2,0,0,0,0,6.352a6.31,6.31,0,0,0,6.34,6.24Z" transform="translate(0.018 0.998)" fill="#0779be"/>
+                <path id="Shape-11" data-name="Shape" d="M5.76,11.52a5.76,5.76,0,1,1,5.76-5.76A5.767,5.767,0,0,1,5.76,11.52Zm1.3-9.17V9.17a3.65,3.65,0,0,0,0-6.82Zm-2.61,0a3.655,3.655,0,0,0,0,6.82Z" transform="translate(0.66 1.52)" fill="#fff"/>
+              </g>
+            </g>
+        </svg>
+    </div>
+</div>
+
+</div>
+
+
+</div>
+
+<div class="sell-ticket" style="flex-direction: row">
+    <div class="st1" style="display: flex; flex-direction: column; width:40%;">
+    <div class="st2" style="border-bottom: 1px solid #E4E4E4; display: flex; width: 100%; padding-bottom: 55px;">
+    <img src="assets/m-e.png" alt="" style="width: 190px;height: 160px; border-radius: 5px; margin-left: 50px;">
+    <div class="st3" style="display: flex; flex-direction: column;">
+        <div class="st3-1" style="display: flex; gap: 100px; align-items: center;">
+        <p style="font-size: 26.7px; font-weight: 600; ">ديفيد جيتا</p>
+        <div class="date" style="margin-left: 10px;"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div>
+        </div>
+        <div class="card-loc" style="color: #707070; margin: 30px 0px 15px 5px; display: flex; align-items: baseline;"><i class="fa-solid fa-location-dot fa-lg" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+        <div>
+
+        </div>
+    </div>
+    </div>
+    <p style="font-size: 19.5px; font-weight: 500; color: #9C9C9C; margin-top: 45px;">عدد التذاكر</p>
+    <form class="form-st" action="" style="display: flex; flex-direction:column;">
+        <div class="container2">
+            <div class="button-wrapper">
+            <div style="display: flex; gap: 52px;">
+            <input id="increment" type="button" style="color:#47B574;" value="+">
+            <div id="counter" style="font-size: 25px; font-weight: 500; text-align: center; width: 50px; height: 50px;">0</div>
+            <input id="decrement" type="button" style="color:#C92B28;" value="-">
+            </div>
+            <div class="ch-box" style="margin-right: 165px;">
+                <input type="checkbox" id="cb1">
+                <label for="cb1" style="color:#5F22D9;">التذاكر متجاورة</label>
+                </div>
+            </div>
+
+        </div>
+        <div class="price-inp">
+        <svg id="money" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20.065 21.685">
+                <path id="Path_502" data-name="Path 502" d="M31.721,31.974a.221.221,0,0,1-.221-.221v-.531a.221.221,0,0,1,.443,0v.531A.221.221,0,0,1,31.721,31.974Z" transform="translate(-21.689 -20.6)" fill="#5b5b5b"/>
+                <path id="Path_503" data-name="Path 503" d="M31.721,41.8a.221.221,0,0,0-.221.221v.531a.221.221,0,0,0,.443,0v-.531A.221.221,0,0,0,31.721,41.8Z" transform="translate(-21.689 -26.621)" fill="#5b5b5b"/>
+                <path id="Path_504" data-name="Path 504" d="M28.523,12.811H23.212a.443.443,0,0,1-.412-.279L21.03,8.106a.442.442,0,0,1,.412-.606h8.851a.442.442,0,0,1,.412.606l-1.77,4.425A.443.443,0,0,1,28.523,12.811Zm-5.01-.885h4.709l1.416-3.54H22.115Z" transform="translate(-15.835 -7.5)" fill="#5b5b5b"/>
+                <path id="Path_505" data-name="Path 505" d="M30.031,34.767h-.664c-1.2,0-1.2-2.567,0-2.567h.664a.221.221,0,0,1,0,.443h-.664c-.611,0-.611,1.682,0,1.682h.664a.221.221,0,1,1,0,.443Z" transform="translate(-19.998 -21.269)" fill="#5b5b5b"/>
+                <path id="Path_506" data-name="Path 506" d="M33.049,33.174c-.336,0-.119-.531-.443-.531h-.885a.221.221,0,1,1,0-.443h.885C33.049,32.2,33.562,33.174,33.049,33.174Z" transform="translate(-21.689 -21.269)" fill="#5b5b5b"/>
+                <path id="Path_507" data-name="Path 507" d="M30.047,41.579h-.885a.712.712,0,0,1-.664-.752c.035-.181.221-.3.372-.15s.04.443.292.443h.885a.23.23,0,1,1,0,.46Z" transform="translate(-20.015 -25.957)" fill="#5b5b5b"/>
+                <path id="Path_508" data-name="Path 508" d="M32.385,39.567h-.664a.221.221,0,0,1,0-.443h.664c.611,0,.611-1.682,0-1.682h-.664a.221.221,0,1,1,0-.443h.664C33.584,37,33.584,39.567,32.385,39.567Z" transform="translate(-21.689 -23.945)" fill="#5b5b5b"/>
+                <path id="Path_509" data-name="Path 509" d="M25.871,36.236a4.868,4.868,0,1,1,4.687-3.54A4.921,4.921,0,0,1,25.871,36.236Zm0-8.851A3.983,3.983,0,1,0,29.613,30,3.983,3.983,0,0,0,25.871,27.385Z" transform="translate(-15.839 -18.092)" fill="#5b5b5b"/>
+                <path id="Path_510" data-name="Path 510" d="M24.23,34.759H14.494a4.868,4.868,0,0,1-4.571-3.2l-.407-1.12a3.1,3.1,0,0,1-.049-1.969l2.314-7.523A4.868,4.868,0,0,1,16.437,17.5h5.85a4.868,4.868,0,0,1,4.656,3.439l2.314,7.523a3.1,3.1,0,0,1-.049,1.969l-.407,1.12A4.868,4.868,0,0,1,24.23,34.759ZM16.437,18.385a3.983,3.983,0,0,0-3.81,2.81l-2.314,7.523a2.213,2.213,0,0,0,.035,1.407l.407,1.12a3.983,3.983,0,0,0,3.739,2.629H24.23a3.983,3.983,0,0,0,3.739-2.62l.407-1.12a2.213,2.213,0,0,0,.035-1.407L26.1,21.2a3.983,3.983,0,0,0-3.81-2.81Z" transform="translate(-9.33 -13.075)" fill="#5b5b5b"/>
+        </svg>
+        <input type="number" name="" id="" style="border: none; width:455px;height: 55px; font-size: 19.5px; font-weight:500;">
+        <p style="font-size: 13.6px; font-weight: bold; color: #47B574;">ريال سعودي</p>
+        </div>
+        <input class="p-i-btn" type="button" name="" id="" value="تم، قدم الطلب للمراجعة" onclick="showSellConf()" style=" width: 500px; cursor: pointer; color: white; margin: 140px auto auto auto; height: 55px; font-size: 17px; font-weight: 600; border-radius: 8px; border: none; box-shadow: none; background-color: #5F22D9;">
+    </form>
+    </div>
+
+
+    <div class="up-side" style="display: flex; flex-direction: column; width:50%; height: 100%; margin-left: 50px;">
+    <h1 style="margin-bottom: 30px; font-size: 26.7px; font-weight: 600;">حمل ملفات التذاكر</h1>
+    <p style="margin-bottom: 32px;font-size: 13.6px; width: 45%; color: #707070;">قم بتحميل ملفات التذاكر حتي نقوم بعرضها على الموقع حتي يستطيع العميل عند الشراء الحصول عليها</p>
+        <div class="drop-section">
+            <div class="col">
+                <div class="cloud-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="126" height="94" viewBox="0 0 126 94">
+                        <defs>
+                          <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 1024 768">
+                            <image width="1024" height="768" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAMACAYAAAC6uhUNAAAABHNCSVQICAgIfAhkiAAAIABJREFUeF7s3QmcZVV5L+y1TnUzNNAIH4hB6K4qqEG9XocYcboOwQH8HJLcECPQVS0mmJhEzdXERBPFxCFek9yYQSOfQ1c1YJKOmos34oDGeDVBEwPGgapqqKoGbBswRKaGHuqsb5WKMto1nTp77/XwS35mOHut933eRXXvf52zTwz+IUCAAAECBAgQIECAAAECBBovEBvfoQYJECBAgAABAgQIECBAgACBIABwCAgQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIECBAgAABAgQIECAgAHAGCBAgQIAAAQIECBAgQIBAAQICgAKGrEUCBAgQIECAAAECBAgQICAAcAYIECBAgAABAgQIECBAgEABAgKAAoasRQIECBAgQIAAAQIECBAgIABwBggQIECAAAECBAgQIECAQAECAoAChqxFAgQIEKiewBn9Vx95xL59h+1Na9a11u5fF9o9h6Uwd2ho9RzWk9qHtVtpXUhxXUz5P0M8JMV4R4zt29op3hbb4bbYE26Zm+u5o9Xaf1vc33P73jU9t63Zve62rdc/5PbqdasiAgQIECBAoAoCAoAqTEENBAgQINAogTM37DhqTdzb24rtjXOt1NsKrY0hpN6QwkNTSCfHGI/qZMMppW/l0GBXiGFXDGlXaOf/+bv/ezv/7/Fb+0O6YU9cu2vb9Ek3d7IOaxMgQIAAAQLVEhAAVGseqiFAgACBGgmMbNz+mBDT4/Nv5h+ey+5NIfbmm+7e/Ifr+jq0kYOC/8jBwOUxpn8L7dYVOSy4fMvs0EQdalcjAQIECBAgsHgBAcDizVxBgAABAgUKnLlhqr+np/3jrdh6Uv4t/uPyH6BPaSRDSrtTDFfkjx9ckfu7PMV0xdbp4X9tZK+aIkCAAAEChQkIAAobuHYJECBA4MACZx29ff2aI8MT8mfyT8lv1z8lX/H4/N/HHvjKxr5iT+7s86mdPhVSzyfHd5ycw4GYGtutxggQIECAQEMFBAANHay2CBAgQGBxApv7r3xkO7Wen696wfwNf8wfll/cCkW9+sbc7adzCPDJnn3tT7z/2uGd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AIECBAQABQxZiwQIECBAgAABAgQIECBAQADgDBAgQIAAAQIECBAgQIAAgQIEBAAFDFmLBAgQIECAAAECBAgQIEBAAOAMECBAgAABAgQIECBAgACBAgQEAAUMWYsECBAgQIAAAQIECBAgQEAA4AwQIECAAAECBAgQIECAAIECBAQABQxZiwQIECBAgAABAgQIECBAQADgDBAgQIAAAQIECBAgQIAAgQIEBAAFDFmLBAgQIECAAAECBAgQIEBAAOAMECBAgAABAgQIECBAgACBAgQEAAUMWYsECBAgQIAAAQIECBAgQEAA4AwQIECAAAECBAgQIECAAIECBAQABQxZiwQIECBAgAABAgQIECBAQADgDBAgQIAAAQIECBAgQIAAgQIEBAAFDFmLBAgQIECAAAECBAgQIEBAAOAMECBAgAABAgQIECBAgACBAgQEAAUMWYsECBAgQIAAAQIECBAgQEAA4AwQIECAAAECBAgQIECAAIECBAQABQxZiwQIECBAgAABAgQIECBAQADgDBAgQIAAAQIECBAgQIAAgQIEBAAFDFmLBAgQIECAAAECBAgQIEBAAOAMECBAgAABAgQIECBAgACBAgQEAAUMWYsECBAgQIAAAQIECBAgQEAA4AwQIECAAAECBAgQIECAAIECBAQABQxZiwQIECBAgAABAgQIECBAQADgDBAgQIAAAQIECBAgQIAAgQIEBAAFDFmLBAgQIECAAAECBAgQIEBAAOAMECBAgAABAgQIECBAgACBAgQEAAUMWYsECBAgQIAAAQIECBAgQEAA4AwQIECAAAECBAgQIECAAIECBAQABQxZiwQIECBAgAABAgQIECBAQADgDBAgQIAAAQIECBAgQIAAgQIEBAAFDFmLBAgQIECAAAECBAgQIEBAAOAMECBAgAABAgQIECBAgACBAgQEAAUMWYsECBAgQIAAAQIECBAgQEAA4AwQIECAAAECBAgQIECAAIECBAQABQxZiwQIECBAgAABAgQIECBAQADgDBAgQIAAAQIECBAgQIAAgQIEBAAFDFmLBAgQIFCWwLnH71x350G3PCvF8LhWDA9NIR6X/8BPqZ2uD7H1zfyfl/XEgz6zZbbvzrJkdEuAAAECBMoWEACUPX/dEyBAgECDBDb3Tg63Y3hHjOF5C2orpQ/FlF6zZfZhswt6vRcRIECAAAECtRYQ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ami3IgDojUb5OwBuNrsHD1287Y79O2/t+rn38z7Yf4v/gVk/96ZrL3VXrv767KU3/GVqs/deAgQIECCwDAEBwDIU3UGAAAECBAoI+BGAAshKECBAgACBigUEABUPV2sECBAgUJeAAKCueeqGAAECBAiUFhAAlBZXjwABAgQI7FFAALBHOMcIECBAgACBfwsIACwCAQIECBCYiIAAYCKD8kwCBAgQIDBSAQHASAfjWQQIECBA4HoBAYCdIECAAAECBIYICACG6DlLgAABAgQKCggACmIrRYAAAQIEKhQQAFQ4VC0RIECAQJ0CAoA656orAgQIECBQSkAAUEpaHQIECBAgMFBAADAQ0HECBAgQIBAuIAAIXwDtEyBAgMB0BAQA05mVlxIgQIAAgTEKCADGOBVvIkCAAAECCwQEANaCAAECBAgQGCIgABii5ywBAgQIECgoIAAoiK0UAQIECBCoUEAAUOFQtUSAAAECdQoIAOqcq64IECBAgEApAQFAKWl1CBAgQIDAQAEBwEBAxwkQIECAQLiAACB8AbRPgAABAtMREABMZ1ZeSoAAAQIExiggABjjVLyJAAECBAgsEBAAWAsCBAgQIEBgiIAAYIieswQIECBAoKCAAKAgtlIECBAgQKBCAQFAhUPVEgECBAjUKSAAqHOuuiJAgAABAqUEBAClpNUhQIAAAQIDBQQAAwEdJ0CAAAEC4QICgPAF0D4BAgQITEdAADCdWXkpAQIECBAYo4AAYIxT8SYCBAgQILBAQABgLQgQIECAAIEhAgKAIXrOEiBAgACBggICgILYShEgQIAAgQoFBAAVDlVLBAgQIFCngACgzrnqigABAgQIlBIQAJSSVocAAQIECAwUEAAMBHScAAECBAiECwgAwhdA+wQIECAwHQEBwHRm5aUECBAgQGCMAgKAMU7FmwgQIECAwAIBAYC1IECAAAECBIYICACG6DlLgAABAgQKCggACmIrRYAAAQIEKhQQAFQ4VC0RIECAQJ0CAoA656orAgQIECBQSkAAUEpaHQIECBAgMFBAADAQ0HECBAgQIBAuIAAIXwDtEyBAgMB0BAQA05mVlxIgQIAAgTEKCADGOBVvIkCAAAECCwQEANaCAAECBAgQGCIgABii5ywBAgQIECgoIAAoiK0UAQIECBCoUEAAUOFQtUSAAAECdQoIAOqcq64IECBAgEApAQFAKWl1CBAgQIDAQAEBwEBAxwkQIECAQLiAACB8AbRPgAABAtMREABMZ1ZeSoAAAQIExiggABjjVLyJAAECBAgsEBAAWAsCBAgQIEBgiIAAYIieswQIECBAoKCAAKAgtlIECBAgQKBCAQFAhUPVEgECBAjUKSAAqHOuuiJAgAABAqUEBAClpNUhQIAAAQIDBQQAAwEdJ0CAAAEC4QICgPAF0D4BAgQITEdAADCdWXkpAQIECBAYo4AAYIxT8SYCBAgQILBAQABgLQgQIECAAIEhAgKAIXrOEiBAgACBggICgILYShEgQIAAgQoFBAAVDlVLBAgQIFCngACgzrnqigABAgQIlBIQAJSSVocAAQIECAwUEAAMBHScAAECBAiECwgAwhdA+wQIECAwHQEBwHRm5aUECBAgQGCMAgKAMU7FmwgQIECAwAIBAYC1IECAAAECBIYICACG6DlLgAABAgQKXWp/ZgAACjZJREFUCggACmIrRYAAAQIEKhQQAFQ4VC0RIECAQJ0CAoA656orAgQIECBQSkAAUEpaHQIECBAgMFBAADAQ0HECBAgQIBAuIAAIXwDtEyBAgMB0BAQA05mVlxIgQIAAgTEKCADGOBVvIkCAAAECCwQEANaCAAECBAgQGCIgABii5ywBAgQIECgoIAAoiK0UAQIECBCoUEAAUOFQtUSAAAECdQoIAOqcq64IECBAgEApAQFAKWl1CBAgQIDAQAEBwEBAxwkQIECAQLiAACB8AbRPgAABAtMREABMZ1ZeSoAAAQIExiggABjjVLyJAAECBAgsEBAAWAsCBAgQIEBgiIAAYIieswQIECBAoKDAicNbn+vLPVqwZNPM20+duXD0S0VrKkaAAAECBAisREAAsBJWlxIgQIAAgeULnDh8/uNN0319+Tff+MZ51314c/vYd0rWVIsAAQIECBBYjYAAYDWubiVAgAABAksXOH7f1gPtvuaHS7/4Zhde7d5+5pljPy9aUzECBAgQIEBgJQICgJWwupQAAQIECCxf4Pi9v3tlc2D257Ztivz53TXdldn8JXedvrC2s/xu3EiAAAECBAiUFijyPxClm1KPAAECBAjUKnBibevJ/sv/txXpr+t+dGb72ANFailCgAABAgQIrFxAALByYgUIECBAgMDyBI6vnf9M23aPLe/Gm9zUdZ/oA4CvFamlCAECBAgQILByAQHAyokVIECAAAECyxN48NDF224/8Pen+xvvWd6tC27qmqee3j66/kTTXl1pHZcTIECAAAECxQQEAMWoFSJAgAABAssROL527mNt224u57bFt7Tz2btOXzjyxCpruJsAAQIECBAoKyAAKOutGgECBAgQWIrAicNbP+gveu9SLrvukq5rvnx2e/2Tq7jbnQQIECBAgMCtExAA3Dp7lQkQIECAwJ4FNg7+6Y7Z7X/7Vf8LAY/t+ZJFB7vmF/23/r/Dt/4vVdVlBAgQIEBgFAICgFGMwSMIECBAgMDuBTbuO7fWzprH+x8HWN/96QUnuuaX89m+923+4fXPLeU+lxAgQIAAAQKjEhAAjGocHkOAAAECBHYn8NDd5+68emf73bZt3rO7k//76f7b/r/10u2jG19t2n8OucdZAgQIECBAYLwCAoDxzsbLCBAgQIDAixTo2o21rQ/N2vZUf+CNL/LQfz7Wf8v/vJud2rxw5Me7OufDBAgQIECAwOQEBACTG5kHEyBAgACBGwtsHD7/wVk3P9m07ftv+Kmu2en/27f73x9w9sxT6z/hSYAAAQIECGQICAAy5qxLAgQIEAgTePjQxVdc2b9z/2zWvaaZz+/p2lnXdN1zzay91F1+2ZObz776chiJdgkQIECAQLyAACB+BQAQIECAAAECBAgQIECAQIKAACBhynokQIAAAQIECBAgQIAAgXgBAUD8CgAgQIAAAQIECBAgQIAAgQQBAUDClPVIgAABAgQIECBAgAABAvECAoD4FQBAgAABAgQIECBAgAABAgkCAoCEKeuRAAECBAgQIECAAAECBOIFBADxKwCAAAECBAgQIECAAAECBBIEBAAJU9YjAQIECBAgQIAAAQIECMQLCADiVwAAAQIECBAgQIAAAQIECCQICAASpqxHAgQIECBAgAABAgQIEIgXEADErwAAAgQIECBAgAABAgQIEEgQEAAkTFmPBAgQIECAAAECBAgQIBAvIACIXwEABAgQIECAAAECBAgQIJAgIABImLIeCRAgQIAAAQIECBAgQCBeQAAQvwIACBAgQIAAAQIECBAgQCBBQACQMGU9EiBAgAABAgQIECBAgEC8gAAgfgUAECBAgAABAgQIECBAgECCgAAgYcp6JECAAAECBAgQIECAAIF4AQFA/AoAIECAAAECBAgQIECAAIEEAQFAwpT1SIAAAQIECBAgQIAAAQLxAgKA+BUAQIAAAQIECBAgQIAAAQIJAgKAhCnrkQABAgQIECBAgAABAgTiBQQA8SsAgAABAgQIECBAgAABAgQSBAQACVPWIwECBAgQIECAAAECBAjECwgA4lcAAAECBAgQIECAAAECBAgkCAgAEqasRwIECBAgQIAAAQIECBCIFxAAxK8AAAIECBAgQIAAAQIECBBIEBAAJExZjwQIECBAgAABAgQIECAQLyAAiF8BAAQIECBAgAABAgQIECCQICAASJiyHgkQIECAAAECBAgQIEAgXkAAEL8CAAgQIECAAAECBAgQIEAgQUAAkDBlPRIgQIAAAQIECBAgQIBAvIAAIH4FABAgQIAAAQIECBAgQIBAgoAAIGHKeiRAgAABAgQIECBAgACBeAEBQPwKACBAgAABAgQIECBAgACBBAEBQMKU9UiAAAECBAgQIECAAAEC8QICgPgVAECAAAECBAgQIECAAAECCQICgIQp65EAAQIECBAgQIAAAQIE4gUEAPErAIAAAQIECBAgQIAAAQIEEgQEAAlT1iMBAgQIECBAgAABAgQIxAsIAOJXAAABAgQIECBAgAABAgQIJAgIABKmrEcCBAgQIECAAAECBAgQiBcQAMSvAAACBAgQIECAAAECBAgQSBAQACRMWY8ECBAgQIAAAQIECBAgEC8gAIhfAQAECBAgQIAAAQIECBAgkCAgAEiYsh4JECBAgAABAgQIECBAIF5AABC/AgAIECBAgAABAgQIECBAIEFAAJAwZT0SIECAAAECBAgQIECAQLyAACB+BQAQIECAAAECBAgQIECAQIKAACBhynokQIAAAQIECBAgQIAAgXgBAUD8CgAgQIAAAQIECBAgQIAAgQQBAUDClPVIgAABAgQIECBAgAABAvECAoD4FQBAgAABAgQIECBAgAABAgkCAoCEKeuRAAECBAgQIECAAAECBOIFBADxKwCAAAECBAgQIECAAAECBBIEBAAJU9YjAQIECBAgQIAAAQIECMQLCADiVwAAAQIECBAgQIAAAQIECCQICAASpqxHAgQIECBAgAABAgQIEIgXEADErwAAAgQIECBAgAABAgQIEEgQEAAkTFmPBAgQIECAAAECBAgQIBAvIACIXwEABAgQIECAAAECBAgQIJAgIABImLIeCRAgQIAAAQIECBAgQCBeQAAQvwIACBAgQIAAAQIECBAgQCBBQACQMGU9EiBAgAABAgQIECBAgEC8gAAgfgUAECBAgAABAgQIECBAgECCgAAgYcp6JECAAAECBAgQIECAAIF4AQFA/AoAIECAAAECBAgQIECAAIEEAQFAwpT1SIAAAQIECBAgQIAAAQLxAgKA+BUAQIAAAQIECBAgQIAAAQIJAgKAhCnrkQABAgQIECBAgAABAgTiBQQA8SsAgAABAgQIECBAgAABAgQSBAQACVPWIwECBAgQIECAAAECBAjECwgA4lcAAAECBAgQIECAAAECBAgkCAgAEqasRwIECBAgQIAAAQIECBCIFxAAxK8AAAIECBAgQIAAAQIECBBIEPgXQmsqAHcsLOYAAAAASUVORK5CYII="/>
+                          </pattern>
+                        </defs>
+                        <rect id="Comp_1_1_" data-name="Comp 1 (1)" width="126" height="94" fill="url(#pattern)"/>
+                    </svg>
+                </div>
+                <span style="color: #707070; width: 35%;">اسحب الملفات واتركها هنا لتحميل او <a class="file-selector" style="color: #C92B28; cursor: pointer;">اضغط هنا</a> لتصفح ملفاتك</span>
+                <input type="file" class="file-selector-input" multiple>
+                
+            </div>
+            <div class="col">
+                <div class="drop-here">اترك هنا</div>
+            </div>
+        </div>
+        <div class="list-title">التذاكر</div>
+        <div class="list-section">
+        <div class="list"></div>
+        </div>
+    </div>
+
+</div>
+
+<div class="sell-conf">
+    <img src="assets/successfully-done.gif" alt="" style="margin-bottom: 35px;  width: 108px; height: 108px;">
+    <h1 style="font-size: 26.7px; font-weight: 600; margin-bottom: 30px;">تم اضافة طلبك وسنقوم بمراجعته</h1>
+    <p style="font-size: 13.6px; color: #707070; width: 48%; text-align: center; margin-bottom: 46px; line-height: 22px;">تم اضافة طلبك سوف تقوم الادارة بمراجعة طلبك ومن ثم اعلامك على الايميل المسجل داخل حسابك</p>
+    <form action="" class="login-info">
+    <input class="login-btn" type="button"  style="width: 532px; margin-bottom: 36px;" onclick="window.location.href='index-log.html';" value="الصفحة الرئيسة">
+    </form>
+    <h6 style="font-size: 14px; font-weight: 600; color: #9C9C9C; margin-bottom: 76px;">لديك استفسار؟<a style="color: #D83F87; cursor: pointer; ">  قم بالتواصل معنا</a></h6>
+</div>
+
+<div class="sell-form">
+    <input type="text" value="SELL" style="background-color: #5F22D9; color: #ffffff; border: none; border-radius:50px;font-size: 50px; text-align:center;font-weight:  600;width: 130px; height: 50px; margin-bottom: 70px;">
+    <p style="font-size: 26.7px;font-weight: 600; margin-bottom: 30px;">بيع تذكرتك</p>
+    <p style="font-size: 13.6px; color: #707070; margin-bottom: 20px;">اختر الفعاليه الي عايز تبيع التذكرةالخاصه بيها</p>
+    <form action="" class="login-info">
+    <div class="login-field" style="margin-bottom: 60px; width: 528px;">        
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 23.808 23.808">
+            <g id="Layer_1" transform="translate(-1.132 -1)">
+              <path id="Path_89" data-name="Path 89" d="M5.068,22.078H5.045v.053L1.132,31.463,18.355,24.24l-10-10Zm5.946,4.161-1.989.834V16.316l1.989,1.989Zm.995-6.94L14,21.29v3.7l-1.989.834ZM8.029,27.491l-1.989.834V22.332l1.989-4.744ZM5.045,24.7v4.039L2.99,29.6Zm9.947-.132V22.284L16.6,23.9Z" transform="translate(0 -6.655)" fill="#5b5b5b"/>
+              <path id="Path_90" data-name="Path 90" d="M24.989,9a1.989,1.989,0,1,0,1.989,1.989A1.991,1.991,0,0,0,24.989,9Zm0,2.984a.995.995,0,1,1,.995-.995A1,1,0,0,1,24.989,11.984Z" transform="translate(-10.992 -4.021)" fill="#5b5b5b"/>
+              <path id="Path_91" data-name="Path 91" d="M42.989,1a1.989,1.989,0,1,0,1.989,1.989A1.991,1.991,0,0,0,42.989,1Zm0,2.984a.995.995,0,1,1,.995-.995A1,1,0,0,1,42.989,3.984Z" transform="translate(-20.039)" fill="#5b5b5b"/>
+              <path id="Path_92" data-name="Path 92" d="M37.989,17a1.989,1.989,0,1,0,1.989,1.989A1.991,1.991,0,0,0,37.989,17Zm0,2.984a.995.995,0,1,1,.995-.995A1,1,0,0,1,37.989,19.984Z" transform="translate(-17.526 -8.042)" fill="#5b5b5b"/>
+              <path id="Path_93" data-name="Path 93" d="M35.808,29.333l.7.7a3.546,3.546,0,0,1,5.009,0l.7-.7A4.541,4.541,0,0,0,35.808,29.333Z" transform="translate(-17.429 -13.574)" fill="#5b5b5b"/>
+              <path id="Path_94" data-name="Path 94" d="M18,9.731a3.485,3.485,0,0,0,0-4.923l-.7.7a2.49,2.49,0,0,1,0,3.517Z" transform="translate(-8.123 -1.914)" fill="#5b5b5b"/>
+              <path id="Path_95" data-name="Path 95" d="M35,7.722A4.724,4.724,0,0,0,35,1.05l-.7.7a3.728,3.728,0,0,1,0,5.266Z" transform="translate(-16.668 -0.025)" fill="#5b5b5b"/>
+              <rect id="Rectangle_8454" data-name="Rectangle 8454" width="1" height="1" transform="translate(14.97 9.97)" fill="#5b5b5b"/>
+              <rect id="Rectangle_8455" data-name="Rectangle 8455" width="1" transform="translate(21.97 6.97)" fill="#5b5b5b"/>
+              <rect id="Rectangle_8456" data-name="Rectangle 8456" width="1" height="1" transform="translate(12.97 1.97)" fill="#5b5b5b"/>
+            </g>
+        </svg>
+        
+        
+        <select name="" id="" style="width:100%; border: none; color: #9C9C9C; font-size: 19.5px; font-weight: 500; margin-right: 19px;">
+            <option value="" disabled selected>اختر الفعالية</option>
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">5</option>
+        </select>
+    </div>
+    <input  type="button" value="استمر" style="padding:17px 250px 17px 240px; color: #ffff;background-color: #5F22D9; border: none; border-radius: 8px; font-size: 17px;font-weight: 600; cursor: pointer;">
+    </form>
+</div>
+<div class="forget-form">
+    <h1>نسيت كلمة المرور</h1>
+    <p>لا تقلق سوف نقوم بارسال رابط لاعادة تعيين كلمة المرور الخاصة بك</p>
+    <form action="" class="login-info">
+    <div class="login-field" style="margin-bottom: 60px; width: 528px;">        
+        <img src="assets/mail.png">
+        <input type="email" id="email2" name="email" placeholder="البريد الالكتروني" required>
+    </div>
+    <button class="login-btn" type="submit"  style="width: 532px; margin-bottom: 35px;">ارسال</button>
+    <h6 >تذكرت كلمة المرور؟ <a style="color: #5f22d9; cursor: pointer;" onclick="showModal()">تسجيل الدخول</a></h6>
+    </form>
+</div>
+
+
+
+
+<div class="header-cont">
+    <h1><span style="color:#a86ff7;">مرحباً بكم </span>في<span style="color:#a86ff7;"> تك هب </span>حيث</h1>
+    <h1>يمكنك استكشاف كل الفعاليات التي ترغب بها</h1>
+    <h4>اختيارك الأول الأمن و المضمون لشراء او بيع تذاكر الفعاليات داخل الممكلة</h4>
+        <div class="co">
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+    </div>
+
+
+    <div class="slider">
+        <div class="list">
+            <div class="item">
+                <img src="assets/1.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="assets/2.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="assets/3.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="assets/4.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="assets/5.jpg" alt="">
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="prev"></button>
+            <button id="next"></button>
+        </div>
+        <ul class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    
+    
+    </div>
+    
+
+</div>
+<div class="main-cont">
+<h2>الفعاليات <span style="color:#f426a7;">المتاحة</span></h2>
+<h5 style="font-size:15px; font-weight: bold; color: gray;">اطلع على الفعاليات المتاحة الان بكل سهولة عن طريق الأقسام</h5>
+<div class="cont-title">
+    <button id="b1" class="active" onclick="activeBtn('b1'),dB('crds')">الكل</button>
+    <button id="b2" onclick="activeBtn('b2',dB('crds2'))">دوري روشن</button>
+    <button id="b3" onclick="activeBtn('b3',dB('crds3'))">فعاليات العيد</button>
+    <button id="b4" onclick="activeBtn('b4',dB('crds4'))">تقويم الرياض</button>
+    <button id="b5" onclick="activeBtn('b5',dB('crds5'))">فعاليات طوال السنة</button>
+    </div>
+    
+    <div class="crds">
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="crds2 dbn">
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="crds3 dbn">
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="crds4 dbn">
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="crds5 dbn">
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+                <button class="card-btn1" onclick="showBuyForm()">اشتري تذكرتك الان</button>
+                <button class="card-btn2" onclick="showSellTicket()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="window.location.href='events.html';" class= "card-btn3" >رؤية جميع الفعاليات المتاحة</button>
+
+
+
+
+
+<h3 class="pay-title" >طريقة شراء التذكرة</h3>
+<div class="pay">
+
+    <div class="pay-way">
+        <div class="ways">
+            <img src="assets/ticket.png">
+            <h4 style="color: #5f22d9;">اختر تذكرتك</h4>
+        </div>
+    </div>
+    <div class="pay-way">
+        <div class="ways">
+            <img src="assets/credit-card.png">
+            <h4 style="color: #5f22d9;">قم بالدفع</h4>
+        </div>
+    </div>
+    <div class="pay-way">
+        <div class="ways">
+            <img src="assets/task-actions.png">
+            <h4 style="color: #5f22d9;">تذكرتك جاهزة الان</h4>
+        </div>
+    </div>
+
+</div>
+
+<h3 class="pay-title">طريقة بيع التذكرة</h3>
+<div class="pay">
+
+    <div class="pay-way">
+        <div class="ways">
+            <img src="assets/inventory.png">
+            <h4 style="color: green;">أدخل التفاصيل</h4>
+        </div>
+    </div>
+    <div class="pay-way">
+        <div class="ways">
+            <img src="assets/file.png">
+            <h4 style="color: green;">نقوم بمراجعة طلبك</h4>
+        </div>
+    </div>
+    <div class="pay-way">
+        <div class="ways">
+            <img src="assets/accounting.png">
+            <h4 style="color: green;">ابدء في جمع الارباح</h4>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+<div class="mid-div">
+    <div class="mid-div-R">
+    <h1 style="font-size: 47.2px; font-weight: 600; color: #ffff;">تقييمات</h1>
+    <p style="font-size: 19.5px; font-weight: normal; color: #9C9C9C;">عملائنا الكرام</p>
+    <div class="mid-div-btns">
+    <button class="prev1">
+    <i class='fa-solid fa-arrow-left fa-xl' style='color: gray;'></i>
+    </button>
+    <button class="next1" >
+    <i class='fa-solid fa-arrow-right fa-xl' style='color: #ffff'></i>
+    </button>
+    </div>
+    </div>
+    
+    
+    <div class="mid-div-L">
+            <div class="slider-wrap" style="top: 25%;">
+        
+                <div class="slider-in" id="box">
+                    <div class="slider-items" style="width: 560px; height: 402.71px;">
+                        <div class="user-card um" style="width: 560px; height: 402.71px; padding: 45px;">
+                            <div class="userP" style="display: flex; flex-direction: row; gap:20px ;margin-bottom: 20px;">
+                            <img class="userImg"  style="border-radius: 50%; width: 80px; height:80px;" src="assets/person-icon.png">
+                                <div style="display: flex; flex-direction: column; align-items:center; align-items: flex-start; ">
+                                <p style="color:white; font-size: 26.7px; font-weight: 600;" >محمد محمود</p>
+                                <img class="str" src="assets/stars.png" style="width: 209px; height: 30px;">
+                                </div>
+                            </div>
+                            <p  style="color:gray;font-size: 22.2px; text-align: start; margin-left: 35px;">اكثر منصة امنه ومضمونة لحجز تذاكر الفعاليات هذه هي معاملتي الاولى ولن تكون الأخيره أنصح جداً بالتعامل معهم حيث يملكون سرعة وسهولة في التنفيذ لشراء التذاكر</p>
+                        </div>
+                    </div>
+                    <div class="slider-items" style="width: 560px; height: 402.71px;">
+                        <div class="user-card um" style="width: 560px; height: 402.71px; padding: 45px;">
+                            <div style="display: flex; flex-direction: row; gap:20px ;margin-bottom: 20px;">
+                            <img class="userImg"  style="border-radius: 50%; width: 80px; height:80px;" src="assets/person-icon.png">
+                                <div style="display: flex; flex-direction: column; align-items:center; align-items: flex-start; ">
+                                <p style="color:white; font-size: 26.7px; font-weight: 600;" >محمد محمود</p>
+                                <img class="str" src="assets/stars.png" style="width: 209px; height: 30px;">
+                                </div>
+                            </div>
+                            <p style="color:gray;font-size: 22.2px; text-align: start; margin-left: 35px;">اكثر منصة امنه ومضمونة لحجز تذاكر الفعاليات هذه هي معاملتي الاولى ولن تكون الأخيره أنصح جداً بالتعامل معهم حيث يملكون سرعة وسهولة في التنفيذ لشراء التذاكر</p>
+                        </div>
+                    </div>
+                    <div class="slider-items" style="width: 560px; height: 402.71px;">
+                        <div class="user-card um" style="width: 560px; height: 402.71px; padding: 45px;">
+                            <div style="display: flex; flex-direction: row; gap:20px ;margin-bottom: 20px;">
+                            <img class="userImg"  style="border-radius: 50%; width: 80px; height:80px;" src="assets/person-icon.png">
+                                <div style="display: flex; flex-direction: column; align-items:center; align-items: flex-start; ">
+                                <p style="color:white; font-size: 26.7px; font-weight: 600;" >محمد محمود</p>
+                                <img class="str" src="assets/stars.png" style="width: 209px; height: 30px;">
+                                </div>
+                            </div>
+                            <p style="color:gray;font-size: 22.2px; text-align: start; margin-left: 35px;">اكثر منصة امنه ومضمونة لحجز تذاكر الفعاليات هذه هي معاملتي الاولى ولن تكون الأخيره أنصح جداً بالتعامل معهم حيث يملكون سرعة وسهولة في التنفيذ لشراء التذاكر</p>
+                        </div>
+                    </div>
+                    <div class="slider-items" style="width: 560px; height: 402.71px;">
+                        <div class="user-card um" style="width: 560px; height: 402.71px; padding: 45px;">
+                            <div style="display: flex; flex-direction: row; gap:20px ;margin-bottom: 20px;">
+                            <img class="userImg"  style="border-radius: 50%; width: 80px; height:80px;" src="assets/person-icon.png">
+                                <div style="display: flex; flex-direction: column; align-items:center; align-items: flex-start; ">
+                                <p style="color:white; font-size: 26.7px; font-weight: 600;" >محمد محمود</p>
+                                <img class="str" src="assets/stars.png" style="width: 209px; height: 30px;">
+                                </div>
+                            </div>
+                            <p style="color:gray;font-size: 22.2px; text-align: start; margin-left: 35px;">اكثر منصة امنه ومضمونة لحجز تذاكر الفعاليات هذه هي معاملتي الاولى ولن تكون الأخيره أنصح جداً بالتعامل معهم حيث يملكون سرعة وسهولة في التنفيذ لشراء التذاكر</p>
+                        </div>
+                    </div>
+                    <div class="slider-items" style="width: 560px; height: 402.71px;">
+                        <div class="user-card um" style="width: 560px; height: 402.71px; padding: 45px;">
+                            <div style="display: flex; flex-direction: row; gap:20px ;margin-bottom: 20px;">
+                            <img class="userImg"  style="border-radius: 50%; width: 80px; height:80px;" src="assets/person-icon.png">
+                                <div style="display: flex; flex-direction: column; align-items:center; align-items: flex-start; ">
+                                <p style="color:white; font-size: 26.7px; font-weight: 600;" >محمد محمود</p>
+                                <img class="str" src="assets/stars.png" style="width: 209px; height: 30px;">
+                                </div>
+                            </div>
+                            <p style="color:gray;font-size: 22.2px; text-align: start; margin-left: 35px;">اكثر منصة امنه ومضمونة لحجز تذاكر الفعاليات هذه هي معاملتي الاولى ولن تكون الأخيره أنصح جداً بالتعامل معهم حيث يملكون سرعة وسهولة في التنفيذ لشراء التذاكر</p>
+                        </div>
+                    </div>
+                    <div class="slider-items" style="width: 560px; height: 402.71px;">
+                        <div class="user-card um" style="width: 560px; height: 402.71px; padding: 45px;">
+                            <div style="display: flex; flex-direction: row; gap:20px ;margin-bottom: 20px;">
+                            <img class="userImg"  style="border-radius: 50%; width: 80px; height:80px;" src="assets/person-icon.png">
+                                <div style="display: flex; flex-direction: column; align-items:center; align-items: flex-start; ">
+                                <p style="color:white; font-size: 26.7px; font-weight: 600;" >محمد محمود</p>
+                                <img class="str" src="assets/stars.png" style="width: 209px; height: 30px;">
+                                </div>
+                            </div>
+                            <p style="color:gray;font-size: 22.2px; text-align: start; margin-left: 35px;">اكثر منصة امنه ومضمونة لحجز تذاكر الفعاليات هذه هي معاملتي الاولى ولن تكون الأخيره أنصح جداً بالتعامل معهم حيث يملكون سرعة وسهولة في التنفيذ لشراء التذاكر</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+    
+</div>
+
+<div class="mid-title">
+<h5>تذاكرنا السابقة</h5>
+<h3>تذاكر فعاليات <span style="color: red;"> قمنا ببيعها</span> داخل موقعنا </h3>
+<h5 style="color: rgb(94, 94, 94);">عدد من تذاكرنا المباعة على الموقع خلال الفتره السابقة</h5>
+</div>
+
+<div class="owlSlider">
+                    <div class="owl-carousel">
+                        <div class="owlSlider-card">
+                            <div class="d-flex justify-content-center align-items-center mb-4">
+                                <img src="assets/E1.png" alt="" >
+                            </div>
+                        </div>
+                        <div class="owlSlider-card">
+                            <div class="d-flex justify-content-center align-items-center mb-4">
+                                <img src="assets/E2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="owlSlider-card">
+                            <div class="d-flex justify-content-center align-items-center mb-4">
+                                <img src="assets/E3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="owlSlider-card">
+                            <div class="d-flex justify-content-center align-items-center mb-4">
+                                <img src="assets/apex-legends-season-3-2019-4k-i3-1920x1080.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+</div>
+
+
+
+
+<footer> 
+    <div class="footer"> 
+    <div class="footer-R">
+    <img style="width:64px; height:48px; margin-bottom: 20px;" src="assets/tick-logo.png">
+    <h5 style="color: #D83F87; font-size: 26.7px; font-weight: 600;">تك هب</h5>
+    <h5 style="color: #9C9C9C;  font-size: 26.7px; font-weight: 600; margin-bottom: 114px;">اختيارك الأول الامن والمضمون</h5>
+    <ul>
+        <li><img src="assets/facebook.png"></li>
+        <li><img src="assets/telegram.png" alt=""></li>
+        <li><img src="assets/twitter.png" alt=""></li>
+        <li><img src="assets/wt-icon.png" alt=""></li>
+    </ul>
+    </div>
+
+    <div class="footer-L">
+        <h5 style="font-size: 26.7px;font-weight: 600; color: #9C9C9C; margin-bottom: 36px;">لمتابعة اخر عروضنا واخبارنا</h5>
+        <h6 style="font-size: 22.2px;font-weight:500 ; color: #707070;margin-bottom: 56px; width: 411px;">قم ادخل بريدك الالكتروني لتكون اول من يعرف عروضنا أخبارنا بشكل حصري</h6>
+
+        <form class="email-bar">
+            <i class="fa-regular fa-envelope fa-2xl" style="border: none;padding: 5px;padding-top: 7px; margin-left: 10px;"></i>
+            <input type="email" placeholder="بريدك الالكتروني">
+            <button class="email-btn"><i class="fa-solid fa-arrow-left fa-xl"></i></button>
+        </form>
+
+    </div>
+
+</div>
+<div class="copy-rights">
+    <ul>
+        <li>جميع الحقوق محفوظة @</li>
+        <li onclick="window.location.href='termCond.html';" style="cursor: pointer;">الشروط والاحكام</li>
+        <li onclick="window.location.href='privacy.html';" style="cursor: pointer;">الخصوصية</li>
+    </ul>
+
+    <a href="#navb" style="width: 64px; height: 64px;"><i class="fa-solid fa-arrow-up fa-2xl" style="color: green;"></i></a>
+    
+</div>
+</footer>
+
+<script src="js/country-states.js"></script>
+<script>
+var user_country_code = "";
+
+(() => {
+  // script https://www.html-code-generator.com/html/drop-down/state-name
+
+  // Get the country name and state name from the imported script.
+  const country_array = country_and_states.country;
+  const states_array = country_and_states.states;
+  
+  const id_state_option = document.getElementById("state");
+  const id_country_option = document.getElementById("country");
+
+  const createCountryNamesDropdown = () => {
+      let option =  '';
+      option += '<option value="" ">اختر الدولة</option>';
+
+      for(let country_code in country_array){
+          // set selected option user country
+          let selected = (country_code == user_country_code) ? ' selected' : '';
+          option += '<option value="'+country_code+'"'+selected+'>'+country_array[country_code]+'</option>';
+      }
+      id_country_option.innerHTML = option;
+  };
+
+  const createStatesNamesDropdown = () => {
+      let selected_country_code = id_country_option.value;
+      // get state names
+      let state_names = states_array[selected_country_code];
+
+      // if invalid country code
+      if(!state_names){
+          id_state_option.innerHTML = '<option>اختر المدينة</option>';
+          return;
+      }
+      let option = '';
+      option += '<select id="state">';
+      option += '<option>اختر المدينة</option>';
+      for (let i = 0; i < state_names.length; i++) {
+          option += '<option value="'+state_names[i].code+'">'+state_names[i].name+'</option>';
+      }
+      option += '</select>';
+      id_state_option.innerHTML = option;
+  };
+
+  // country select change event
+  id_country_option.addEventListener('change', createStatesNamesDropdown);
+
+  createCountryNamesDropdown();
+  createStatesNamesDropdown();
+})();
+</script>
+<script>
+let incrementButton = document.getElementById("increment");
+let decrementButton = document.getElementById("decrement");
+let counter = document.getElementById("counter");
+let count = 0;
+
+incrementButton.addEventListener("click", function () {
+  count++;
+  counter.textContent = count;
+  updateStyles(count);
+});
+
+decrementButton.addEventListener("click", () => {
+  count--;
+  counter.textContent = count;
+  updateStyles(count);
+});
+
+function updateStyles(count) {
+  if (count < 0) {
+    counter.classList.add("negative");
+  } else if (count > 0) {
+    counter.classList.add("positive");
+  } else {
+    counter.className = "";
+  }
+}
+</script>
+<script src="https://kit.fontawesome.com/c6b51c86ab.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/app.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/script2.js"></script>
+<script type="text/javascript" src="js/slider1.js"></script>
+<script src="js/slider2.js"></script>
+<script src="js/owlSlider.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+
+
+
+</body>
+</html>

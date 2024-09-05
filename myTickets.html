@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <title>TIC</title>
+</head>
+<body>
+
+<nav class="navb" id="navb">
+        <a href="index-log.html"><img src="assets/tick-logo.png" alt="logo" class="tick-logo"></a>
+        <ul class="nav-ul" id="nav-ul">
+            <li class="nav-li "><a href="events.html">الأقسام</a></li>
+            <li class="nav-li "><a href="knowUs.html">تعرف علينا</a></li>
+            <li class="nav-li "><a href="contactUs.html">تواصل معنا</a></li>
+            <a class="lang" href="">EN</a>
+        </ul>
+
+        <form action="" class="search-bar">
+            <input type="text" placeholder="ابحث هنا ....">
+            <button class="search-btn" type="submit"><img src="assets/search-icon.png"></button>
+        </form>
+
+        <form class="sell-btn" onclick="showSellForm()">
+        <i class="fa fa-ticket" style="padding-left:10px"></i>
+        <input type="button" value="بيع تذكرت" >
+        </form>
+        <div class="user">
+            <img src="assets/person-icon.png" alt="">
+            <p>محمد محمود</p>
+            <i class="fa-solid fa-caret-down fa-xl" id="ic" style="color: #ffffff;  margin-right: 0px; cursor: pointer; z-index: 2;"  onclick="changeIcon(this.id)"></i>
+        </div>
+        <div class="d-menu">
+        <form class="menu-inner" onclick="window.location.href='myAcc.html';">
+            <i class="fa-solid fa-user fa-xl" style="color: #ED8A19;"></i>
+            <p style="color: #ED8A19;">حسابي</p>
+            <i class="fa-solid fa-chevron-left fa-xl" style="color: #ED8A19;"></i>
+        </form>
+
+        <form class="menu-inner" onclick="window.location.href='myTickets.html';">
+        <i class="fa-solid fa-ticket fa-xl" style="color: #5F22D9;"></i>
+        <p style="color: #5F22D9;">تذاكري</p>
+        <i class="fa-solid fa-chevron-left fa-xl" style="color: #5F22D9;"></i>
+        </form>
+
+        <form class="menu-inner" onclick="window.location.href='myWallet.html';">
+        <i class="fa-solid fa-wallet fa-xl" style="color: #47B574;"></i>
+        <p style="color: #47B574;">محفظتي</p>
+        <i class="fa-solid fa-chevron-left fa-xl" style="color: #47B574;"></i>
+        </form>
+        <input type="button" value="تسجيل الخروج" style="cursor: pointer; " window.location.href='index.html';>
+        </div>
+</nav>
+<nav class="navb-m">
+    <a href="index.html"><img src="assets/tick-logo.png" alt="logo" class="tick-logo"></a>
+    <form action="" class="search-bar">
+        <input type="text" placeholder="ابحث هنا ....">
+        <button class="search-btn" type="submit"><img src="assets/search-icon.png"></button>
+    </form>
+    <i class="fa-solid fa-bars fa-xl" style="color: #AD72FE;" onclick="showNavbM()"></i>
+</nav>
+<div class="navb-m-ol">
+    <div style="display: flex; flex-direction: row; margin:64px auto 100px auto; align-items: center; height:50px; gap: 20px;">
+    <i class="fa-solid fa-x fa-xl" style="color: #c92b28; margin-left: 30px;" onclick="closeNavbM()"></i>
+    <div class="user">
+        <img src="assets/person-icon.png" alt="">
+        <p>محمد محمود</p>
+        <i class="fa-solid fa-caret-down fa-xl" id="ic2" style="color: #5F22D9; margin-right: 0px; cursor: pointer; z-index: 2;"  onclick="changeIcon(this.id)"></i>
+    </div>
+    <div class="d-menu">
+    <form class="menu-inner" onclick="window.location.href='myAcc.html';">
+        <i class="fa-solid fa-user fa-xl" style="color: #ED8A19;"></i>
+        <p style="color: #ED8A19;">حسابي</p>
+        <i class="fa-solid fa-chevron-left fa-xl" style="color: #ED8A19;"></i>
+    </form>
+
+    <form class="menu-inner" onclick="window.location.href='myTickets.html';">
+    <i class="fa-solid fa-ticket fa-xl" style="color: #5F22D9;"></i>
+    <p style="color: #5F22D9;">تذاكري</p>
+    <i class="fa-solid fa-chevron-left fa-xl" style="color: #5F22D9;"></i>
+    </form>
+
+    <form class="menu-inner" onclick="window.location.href='myWallet.html';">
+    <i class="fa-solid fa-wallet fa-xl" style="color: #47B574;"></i>
+    <p style="color: #47B574;">محفظتي</p>
+    <i class="fa-solid fa-chevron-left fa-xl" style="color: #47B574;"></i>
+    </form>
+    <input type="button" value="تسجيل الخروج" style="cursor: pointer; " window.location.href='index.html';>
+    </div>
+    </div>
+    <ul class="nav-ul" id="nav-ul" >
+        <li class="nav-li "><a href="events.html">الأقسام</a></li>
+        <li class="nav-li "><a href="knowUs.html">تعرف علينا</a></li>
+        <li class="nav-li "><a href="contactUs.html">تواصل معنا</a></li>
+        <a class="lang" href="#">EN</a>
+        <form class="sell-btn" onclick="showSellForm()">
+            <i class="fa fa-ticket" style="padding-left:10px"></i>
+            <input type="button" value="بيع تذكرت" >
+            </form>
+    </ul>
+</div>
+
+
+<div class="overlay" onclick="closeModal()"></div>
+<div class="overlay2" onclick="closeDiv()"></div>
+<div class="overlay3" onclick="overlay3()"></div>
+
+
+<div class="sell-form">
+    <input type="text" value="SELL" style="background-color: #5F22D9; color: #ffffff; border: none; border-radius:50px;font-size: 50px; text-align:center;font-weight:  600;width: 130px; height: 50px; margin-bottom: 70px;">
+    <p style="font-size: 26.7px;font-weight: 600; margin-bottom: 30px;">بيع تذكرتك</p>
+    <p style="font-size: 13.6px; color: #707070; margin-bottom: 60px;">اختر الفعاليه الي عايز تبيع التذكرةالخاصه بيها</p>
+    <form action="" class="login-info">
+    <div class="login-field" style="margin-bottom: 60px; width: 528px;">        
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 23.808 23.808">
+            <g id="Layer_1" transform="translate(-1.132 -1)">
+              <path id="Path_89" data-name="Path 89" d="M5.068,22.078H5.045v.053L1.132,31.463,18.355,24.24l-10-10Zm5.946,4.161-1.989.834V16.316l1.989,1.989Zm.995-6.94L14,21.29v3.7l-1.989.834ZM8.029,27.491l-1.989.834V22.332l1.989-4.744ZM5.045,24.7v4.039L2.99,29.6Zm9.947-.132V22.284L16.6,23.9Z" transform="translate(0 -6.655)" fill="#5b5b5b"/>
+              <path id="Path_90" data-name="Path 90" d="M24.989,9a1.989,1.989,0,1,0,1.989,1.989A1.991,1.991,0,0,0,24.989,9Zm0,2.984a.995.995,0,1,1,.995-.995A1,1,0,0,1,24.989,11.984Z" transform="translate(-10.992 -4.021)" fill="#5b5b5b"/>
+              <path id="Path_91" data-name="Path 91" d="M42.989,1a1.989,1.989,0,1,0,1.989,1.989A1.991,1.991,0,0,0,42.989,1Zm0,2.984a.995.995,0,1,1,.995-.995A1,1,0,0,1,42.989,3.984Z" transform="translate(-20.039)" fill="#5b5b5b"/>
+              <path id="Path_92" data-name="Path 92" d="M37.989,17a1.989,1.989,0,1,0,1.989,1.989A1.991,1.991,0,0,0,37.989,17Zm0,2.984a.995.995,0,1,1,.995-.995A1,1,0,0,1,37.989,19.984Z" transform="translate(-17.526 -8.042)" fill="#5b5b5b"/>
+              <path id="Path_93" data-name="Path 93" d="M35.808,29.333l.7.7a3.546,3.546,0,0,1,5.009,0l.7-.7A4.541,4.541,0,0,0,35.808,29.333Z" transform="translate(-17.429 -13.574)" fill="#5b5b5b"/>
+              <path id="Path_94" data-name="Path 94" d="M18,9.731a3.485,3.485,0,0,0,0-4.923l-.7.7a2.49,2.49,0,0,1,0,3.517Z" transform="translate(-8.123 -1.914)" fill="#5b5b5b"/>
+              <path id="Path_95" data-name="Path 95" d="M35,7.722A4.724,4.724,0,0,0,35,1.05l-.7.7a3.728,3.728,0,0,1,0,5.266Z" transform="translate(-16.668 -0.025)" fill="#5b5b5b"/>
+              <rect id="Rectangle_8454" data-name="Rectangle 8454" width="1" height="1" transform="translate(14.97 9.97)" fill="#5b5b5b"/>
+              <rect id="Rectangle_8455" data-name="Rectangle 8455" width="1" transform="translate(21.97 6.97)" fill="#5b5b5b"/>
+              <rect id="Rectangle_8456" data-name="Rectangle 8456" width="1" height="1" transform="translate(12.97 1.97)" fill="#5b5b5b"/>
+            </g>
+          </svg>
+          
+          
+        <select name="" id="" style="width:100%; border: none; color: #9C9C9C; font-size: 19.5px; font-weight: 500; margin-right: 19px; ">
+            <option value="" disabled selected>اختر الفعالية</option>
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">5</option>
+        </select>
+    </div>
+    <input  type="button" value="استمر" style="padding:17px 250px 17px 240px; color: #ffff;background-color: #5F22D9; border: none; border-radius: 8px; font-size: 17px;font-weight: 600; cursor: pointer;">
+    </form>
+</div>
+
+<div class="delete-form">
+    <img src="assets/109218-delete.svg" alt="" style="margin-bottom: 80px;">
+    <p style="font-size: 26.7px;font-weight: 600; margin-bottom: 30px;">هل تريد حذف التذكرة؟</p>
+    <p style="font-size: 13.6px; color: #707070;text-align: center; width: 50%;">اذا قمت بحذف التذكرة لن تستطيع استرجاعها مرة اخرى وعند محاولة تحميلها مرة أخري سوف تقوم بانتظار نفس فترة المراجعة</p>
+    <div class="tip1" style="display: flex; align-items: center; gap: 58px; justify-content: flex-start; background-color: #47B57425; margin: 32px 0px 32px 0px; padding: 16px; width: 62.2%; ">
+    <img src="assets/advice.svg" alt="">
+    <p style="font-size: 13.6px; color: #47B574;;text-align: center; width: 75%;">نقترح أنت تقوم باخفائها بدلا من الحذف حتي لا تنتظر مدة المراجعة لتوفير وقتك وجهدك</p>
+    </div> 
+    <input type="button" name="" id="" value="نعم أريد حذف التذكرة" style="border: none; background-color: #C92B28; color: #ffff; cursor: pointer; font-size: 17px; font-weight: 600; padding: 16px; text-align: center; border-radius: 8px; width: 530px; height: 55px;">
+</div>
+
+<div class="changeP-form">
+    <p style="font-size: 26.7px;font-weight: 600; margin-bottom: 30px;">تعديل سعر التذكرة</p>
+    <p style="font-size: 13.6px; color: #707070;text-align: center; width: 50%; margin-bottom: 50px;">يمكنك تعديل سعر التذكرة الى سعر جديد</p>
+    <form action="" style="display: flex; flex-direction: column; width: 100%; gap: 38px;">
+    <div class="price-inp" style="width: 64%; margin: auto;">
+        <svg id="money" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20.065 21.685">
+                <path id="Path_502" data-name="Path 502" d="M31.721,31.974a.221.221,0,0,1-.221-.221v-.531a.221.221,0,0,1,.443,0v.531A.221.221,0,0,1,31.721,31.974Z" transform="translate(-21.689 -20.6)" fill="#5b5b5b"/>
+                <path id="Path_503" data-name="Path 503" d="M31.721,41.8a.221.221,0,0,0-.221.221v.531a.221.221,0,0,0,.443,0v-.531A.221.221,0,0,0,31.721,41.8Z" transform="translate(-21.689 -26.621)" fill="#5b5b5b"/>
+                <path id="Path_504" data-name="Path 504" d="M28.523,12.811H23.212a.443.443,0,0,1-.412-.279L21.03,8.106a.442.442,0,0,1,.412-.606h8.851a.442.442,0,0,1,.412.606l-1.77,4.425A.443.443,0,0,1,28.523,12.811Zm-5.01-.885h4.709l1.416-3.54H22.115Z" transform="translate(-15.835 -7.5)" fill="#5b5b5b"/>
+                <path id="Path_505" data-name="Path 505" d="M30.031,34.767h-.664c-1.2,0-1.2-2.567,0-2.567h.664a.221.221,0,0,1,0,.443h-.664c-.611,0-.611,1.682,0,1.682h.664a.221.221,0,1,1,0,.443Z" transform="translate(-19.998 -21.269)" fill="#5b5b5b"/>
+                <path id="Path_506" data-name="Path 506" d="M33.049,33.174c-.336,0-.119-.531-.443-.531h-.885a.221.221,0,1,1,0-.443h.885C33.049,32.2,33.562,33.174,33.049,33.174Z" transform="translate(-21.689 -21.269)" fill="#5b5b5b"/>
+                <path id="Path_507" data-name="Path 507" d="M30.047,41.579h-.885a.712.712,0,0,1-.664-.752c.035-.181.221-.3.372-.15s.04.443.292.443h.885a.23.23,0,1,1,0,.46Z" transform="translate(-20.015 -25.957)" fill="#5b5b5b"/>
+                <path id="Path_508" data-name="Path 508" d="M32.385,39.567h-.664a.221.221,0,0,1,0-.443h.664c.611,0,.611-1.682,0-1.682h-.664a.221.221,0,1,1,0-.443h.664C33.584,37,33.584,39.567,32.385,39.567Z" transform="translate(-21.689 -23.945)" fill="#5b5b5b"/>
+                <path id="Path_509" data-name="Path 509" d="M25.871,36.236a4.868,4.868,0,1,1,4.687-3.54A4.921,4.921,0,0,1,25.871,36.236Zm0-8.851A3.983,3.983,0,1,0,29.613,30,3.983,3.983,0,0,0,25.871,27.385Z" transform="translate(-15.839 -18.092)" fill="#5b5b5b"/>
+                <path id="Path_510" data-name="Path 510" d="M24.23,34.759H14.494a4.868,4.868,0,0,1-4.571-3.2l-.407-1.12a3.1,3.1,0,0,1-.049-1.969l2.314-7.523A4.868,4.868,0,0,1,16.437,17.5h5.85a4.868,4.868,0,0,1,4.656,3.439l2.314,7.523a3.1,3.1,0,0,1-.049,1.969l-.407,1.12A4.868,4.868,0,0,1,24.23,34.759ZM16.437,18.385a3.983,3.983,0,0,0-3.81,2.81l-2.314,7.523a2.213,2.213,0,0,0,.035,1.407l.407,1.12a3.983,3.983,0,0,0,3.739,2.629H24.23a3.983,3.983,0,0,0,3.739-2.62l.407-1.12a2.213,2.213,0,0,0,.035-1.407L26.1,21.2a3.983,3.983,0,0,0-3.81-2.81Z" transform="translate(-9.33 -13.075)" fill="#5b5b5b"/>
+        </svg>
+        <input type="number" name="" id="" style="border: none; width:340px;height: 55px; font-size: 19.5px; font-weight:500;">
+        <p style="font-size: 13.6px; font-weight: bold; color: #47B574;">ريال سعودي</p>
+    </div>
+    <input type="button" name="" id="" value="تعديل السعر" style="border: none; width:64%; margin: auto; height: 55px; font-size: 17px; font-weight:600; background-color: #5F22D9; text-align: center; color: #fff; border-radius: 8px;">
+    </form>   
+</div>
+
+
+<div class="ticket-cont mob-w" >
+<h1 style="font-size: 26.7px; font-weight: 600; margin-bottom: 36px;">تذاكري</h1>
+<p style="font-size: 13.6px; color: #707070; margin-bottom: 62px;">تمكنك هذه الصفحة من ادارة التذاكر التي قمت بعرضها للبيع</p>
+
+<div class="ticket-stat">
+
+
+<div class="stat" style="background-color: #5f22d925;">
+<img src="assets/ticket.png" alt="">
+<p style="font-size: 19.5px; font-weight: 500; color:#5B5B5B;margin-bottom: 25px;">اجمالي التذاكر</p>
+<p style="font-size: 26.7px; font-weight: 600; color:#5F22D9;">25</p>
+</div>
+
+<div class="stat" style="background-color: #ed8a1925;">
+    <img src="assets/validation.png" alt="">
+    <p style="font-size: 19.5px; font-weight: 500; color:#5B5B5B; margin-bottom: 25px;">اجمالي التذاكر</p>
+    <p style="font-size: 26.7px; font-weight: 600; color:#ED8A19;">25</p>
+</div>
+
+<div class="stat" style="background-color: #47B57425;">
+        <img src="assets/available.png" alt="">
+        <p style="font-size: 19.5px; font-weight: 500; color:#5B5B5B; margin-bottom: 25px;">اجمالي التذاكر</p>
+        <p style="font-size: 26.7px; font-weight: 600; color:#47B574;">25</p>
+</div>
+
+<div class="stat" style="background-color: #C92B2825;">
+            <img src="assets/blindness.png" alt="">
+            <p style="font-size: 19.5px; font-weight: 500; color:#5B5B5B; margin-bottom: 25px;">اجمالي التذاكر</p>
+            <p style="font-size: 26.7px; font-weight: 600; color:#C92B28;">25</p>
+</div>
+
+</div>
+
+<h1 style="font-size: 26.7px; font-weight: 600; margin-bottom: 36px; margin-top: 80px;">قائمة التذاكر</h1>
+
+
+<div class="myTickets">
+
+<div class="ti hide-cont" id="ti1">
+
+<div class="ti-inner" id="test1">
+<img src="assets/fb1.png" alt="">
+<div class="ul-div" style="width: 80%;">
+<ul>
+    <li class="ti-li-tilte" style="font-size: 26.7px;font-weight: 600; margin-left: 50px;">ماتش الهلال</li>
+    <li><div class="date" style="margin-left: 10px;"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></li>
+    <li class="ti-li-m" style="color: #47B574;"><i class="fa fa-ticket" style="padding-left:7px"></i><Input type="button" value="6" style=" border: none; background:none; cursor: text; color: #47B574;"> تذاكر</li>
+</ul>
+<div class="card-loc" style="color: #707070; margin: 30px 0px 15px 5px;"><i class="fa-solid fa-location-dot fa-lg" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده</div>
+</div>
+<i class="fa-solid fa-chevron-down fa-2xl chev-icon" id="a1" style="color: #D83F87; cursor: pointer;" onclick="m(this.id),changeArrow(this.id)"></i>
+</div> 
+
+<div class="ticket-div hide-cont"  style="max-height: 152px; width: 96%; margin: auto; ">
+    <div class="cont-div-R" style="width: 75%;">
+        <h3 style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">ROYAL</h3>
+        <div class="CDR-m" style="display: flex; gap: 75px;">
+        <div style="display: flex; flex-direction:column; align-items: center; text-align: center; ;">
+            <p>العدد</p>
+            <h5>3 تذكرة</h5>
+        </div>
+        <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+            <p>رقم الصف</p>
+            <h5>116</h5>
+        </div>
+        <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+            <p>ارقام المقاعد</p>
+            <h5>2,3,4</h5>
+        </div>
+        </div>
+        <h3 class="hPrice" style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">250 ر.س</h3>
+        <div id="sw">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="sw-slider"></span>
+            <span class="knob"></span>
+        </label>
+        </div>
+        <div class="CDR-m-l" style="display: flex; width: 100%; justify-content: space-between; display: none;">
+        <label style="cursor: pointer;" onclick="showChangeForm()">
+            <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+            <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+            </label>
+    
+            <label style="cursor: pointer;" onclick="showDeleteForm()">
+                <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+                <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+            </label>
+        </div>
+    </div>
+
+    <div class="cont-div-L" style="width: 25%;">
+        <label style="cursor: pointer;" onclick="showChangeForm()">
+        <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+        <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+        </label>
+
+        <label style="cursor: pointer;" onclick="showDeleteForm()">
+            <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+            <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+        </label>
+
+    </div>
+</div>
+<div class="ticket-div hide-cont"  style="max-height: 152px; width: 96%; margin: auto; ">
+    <div class="cont-div-R" style="width: 75%;">
+        <h3 style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">ROYAL</h3>
+        <div class="CDR-m" style="display: flex; gap: 75px;">
+        <div style="display: flex; flex-direction:column; align-items: center; text-align: center; ;">
+            <p>العدد</p>
+            <h5>3 تذكرة</h5>
+        </div>
+        <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+            <p>رقم الصف</p>
+            <h5>116</h5>
+        </div>
+        <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+            <p>ارقام المقاعد</p>
+            <h5>2,3,4</h5>
+        </div>
+        </div>
+        <h3 class="hPrice" style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">250 ر.س</h3>
+        <div id="sw">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="sw-slider"></span>
+            <span class="knob"></span>
+        </label>
+        </div>
+        <div class="CDR-m-l" style="display: flex; width: 100%; justify-content: space-between; display: none;">
+            <input type="button" class="sell-stat" name="" id="" value="مباعة بالكامل" style="background-color: #47B574;">
+        </div>
+    </div>
+
+    <div class="cont-div-L" style="width: 25%;">
+        <label style="cursor: pointer;" onclick="showChangeForm()">
+        <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+        <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+        </label>
+
+        <label style="cursor: pointer;" onclick="showDeleteForm()">
+            <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+            <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+        </label>
+
+    </div>
+</div>
+<div class="ticket-div hide-cont"  style="max-height: 152px; width: 96%; margin: auto; ">
+    <div class="cont-div-R" style="width: 75%;">
+        <h3 style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">ROYAL</h3>
+        <div class="CDR-m" style="display: flex; gap: 75px;">
+        <div style="display: flex; flex-direction:column; align-items: center; text-align: center; ;">
+            <p>العدد</p>
+            <h5>3 تذكرة</h5>
+        </div>
+        <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+            <p>رقم الصف</p>
+            <h5>116</h5>
+        </div>
+        <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+            <p>ارقام المقاعد</p>
+            <h5>2,3,4</h5>
+        </div>
+        </div>
+        <h3 class="hPrice" style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">250 ر.س</h3>
+        <div id="sw">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="sw-slider"></span>
+            <span class="knob"></span>
+        </label>
+        </div>
+        <div class="CDR-m-l" style="display: flex; width: 100%; justify-content: space-between; display: none;">
+            <input type="button" class="sell-stat" name="" id="" value="مباعة بالكامل" style="background-color: #ED8A19;">
+        </div>
+    </div>
+
+    <div class="cont-div-L" style="width: 25%;">
+        <label style="cursor: pointer;" onclick="showChangeForm()">
+        <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+        <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+        </label>
+
+        <label style="cursor: pointer;" onclick="showDeleteForm()">
+            <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+            <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+        </label>
+
+    </div>
+</div>
+<div class="ticket-div hide-cont"  style="max-height: 152px; width: 96%; margin: auto; ">
+    <div class="cont-div-R" style="width: 75%;">
+        <h3 style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">ROYAL</h3>
+        <div class="CDR-m" style="display: flex; gap: 75px;">
+        <div style="display: flex; flex-direction:column; align-items: center; text-align: center; ;">
+            <p>العدد</p>
+            <h5>3 تذكرة</h5>
+        </div>
+        <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+            <p>رقم الصف</p>
+            <h5>116</h5>
+        </div>
+        <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+            <p>ارقام المقاعد</p>
+            <h5>2,3,4</h5>
+        </div>
+        </div>
+        <h3 class="hPrice" style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">250 ر.س</h3>
+        <div id="sw">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="sw-slider"></span>
+            <span class="knob"></span>
+        </label>
+        </div>
+        <div class="CDR-m-l" style="display: flex; width: 100%; justify-content: space-between; display: none;">
+            <input type="button" class="sell-stat" name="" id="" value="مباعة بالكامل" style="background-color: #C92B28;">
+        </div>
+    </div>
+
+    <div class="cont-div-L" style="width: 25%;">
+        <label style="cursor: pointer;" onclick="showChangeForm()">
+        <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+        <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+        </label>
+
+        <label style="cursor: pointer;" onclick="showDeleteForm()">
+            <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+            <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+        </label>
+
+    </div>
+</div>
+</div>
+<div class="ti hide-cont" id="ti2">
+
+    <div class="ti-inner" id="test2">
+    <img src="assets/fb1.png" alt="">
+    <div class="ul-div" style="width: 80%;">
+    <ul>
+        <li class="ti-li-tilte" style="font-size: 26.7px;font-weight: 600; margin-left: 50px;">ماتش الهلال</li>
+        <li><div class="date" style="margin-left: 10px;"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></li>
+        <li class="ti-li-m" style="color: #47B574;"><i class="fa fa-ticket" style="padding-left:7px"></i><Input type="button" value="6" style=" border: none; background:none; cursor: text; color: #47B574;"> تذاكر</li>
+    </ul>
+    <div class="card-loc" style="color: #707070; margin: 30px 0px 15px 5px;"><i class="fa-solid fa-location-dot fa-lg" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده</div>
+    </div>
+    <i class="fa-solid fa-chevron-down fa-2xl chev-icon" id="a2" style="color: #D83F87; cursor: pointer;" onclick="m(this.id),changeArrow(this.id)"></i>
+    </div> 
+    
+    <div class="ticket-div hide-cont"  style="max-height: 152px; width: 96%; margin: auto; ">
+        <div class="cont-div-R" style="width: 75%;">
+            <h3 style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">ROYAL</h3>
+            <div class="CDR-m" style="display: flex; gap: 75px;">
+            <div style="display: flex; flex-direction:column; align-items: center; text-align: center; ;">
+                <p>العدد</p>
+                <h5>3 تذكرة</h5>
+            </div>
+            <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                <p>رقم الصف</p>
+                <h5>116</h5>
+            </div>
+            <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                <p>ارقام المقاعد</p>
+                <h5>2,3,4</h5>
+            </div>
+            </div>
+            <h3 class="hPrice" style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">250 ر.س</h3>
+            <div id="sw">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="sw-slider"></span>
+                <span class="knob"></span>
+            </label>
+            </div>
+            <div class="CDR-m-l" style="display: flex; width: 100%; justify-content: space-between; display: none;">
+            <label style="cursor: pointer;" onclick="showChangeForm()">
+                <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+                <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+                </label>
+        
+                <label style="cursor: pointer;" onclick="showDeleteForm()">
+                    <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+                    <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+                </label>
+            </div>
+        </div>
+    
+        <div class="cont-div-L" style="width: 25%;">
+            <label style="cursor: pointer;" onclick="showChangeForm()">
+            <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+            <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+            </label>
+    
+            <label style="cursor: pointer;" onclick="showDeleteForm()">
+                <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+                <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+            </label>
+    
+        </div>
+    </div>
+    <div class="ticket-div hide-cont"  style="max-height: 152px; width: 96%; margin: auto; ">
+        <div class="cont-div-R" style="width: 75%;">
+            <h3 style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">ROYAL</h3>
+            <div class="CDR-m" style="display: flex; gap: 75px;">
+            <div style="display: flex; flex-direction:column; align-items: center; text-align: center; ;">
+                <p>العدد</p>
+                <h5>3 تذكرة</h5>
+            </div>
+            <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                <p>رقم الصف</p>
+                <h5>116</h5>
+            </div>
+            <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                <p>ارقام المقاعد</p>
+                <h5>2,3,4</h5>
+            </div>
+            </div>
+            <h3 class="hPrice" style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">250 ر.س</h3>
+            <div id="sw">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="sw-slider"></span>
+                <span class="knob"></span>
+            </label>
+            </div>
+            <div class="CDR-m-l" style="display: flex; width: 100%; justify-content: space-between; display: none;">
+                <input type="button" class="sell-stat" name="" id="" value="مباعة بالكامل" style="background-color: #47B574;">
+            </div>
+        </div>
+    
+        <div class="cont-div-L" style="width: 25%;">
+            <label style="cursor: pointer;" onclick="showChangeForm()">
+            <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+            <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+            </label>
+    
+            <label style="cursor: pointer;" onclick="showDeleteForm()">
+                <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+                <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+            </label>
+    
+        </div>
+    </div>
+    <div class="ticket-div hide-cont"  style="max-height: 152px; width: 96%; margin: auto; ">
+        <div class="cont-div-R" style="width: 75%;">
+            <h3 style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">ROYAL</h3>
+            <div class="CDR-m" style="display: flex; gap: 75px;">
+            <div style="display: flex; flex-direction:column; align-items: center; text-align: center; ;">
+                <p>العدد</p>
+                <h5>3 تذكرة</h5>
+            </div>
+            <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                <p>رقم الصف</p>
+                <h5>116</h5>
+            </div>
+            <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                <p>ارقام المقاعد</p>
+                <h5>2,3,4</h5>
+            </div>
+            </div>
+            <h3 class="hPrice" style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">250 ر.س</h3>
+            <div id="sw">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="sw-slider"></span>
+                <span class="knob"></span>
+            </label>
+            </div>
+            <div class="CDR-m-l" style="display: flex; width: 100%; justify-content: space-between; display: none;">
+                <input type="button" class="sell-stat" name="" id="" value="مباعة بالكامل" style="background-color: #ED8A19;">
+            </div>
+        </div>
+    
+        <div class="cont-div-L" style="width: 25%;">
+            <label style="cursor: pointer;" onclick="showChangeForm()">
+            <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+            <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+            </label>
+    
+            <label style="cursor: pointer;" onclick="showDeleteForm()">
+                <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+                <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+            </label>
+    
+        </div>
+    </div>
+    <div class="ticket-div hide-cont"  style="max-height: 152px; width: 96%; margin: auto; ">
+        <div class="cont-div-R" style="width: 75%;">
+            <h3 style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">ROYAL</h3>
+            <div class="CDR-m" style="display: flex; gap: 75px;">
+            <div style="display: flex; flex-direction:column; align-items: center; text-align: center; ;">
+                <p>العدد</p>
+                <h5>3 تذكرة</h5>
+            </div>
+            <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                <p>رقم الصف</p>
+                <h5>116</h5>
+            </div>
+            <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                <p>ارقام المقاعد</p>
+                <h5>2,3,4</h5>
+            </div>
+            </div>
+            <h3 class="hPrice" style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">250 ر.س</h3>
+            <div id="sw">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="sw-slider"></span>
+                <span class="knob"></span>
+            </label>
+            </div>
+            <div class="CDR-m-l" style="display: flex; width: 100%; justify-content: space-between; display: none;">
+                <input type="button" class="sell-stat" name="" id="" value="مباعة بالكامل" style="background-color: #C92B28;">
+            </div>
+        </div>
+    
+        <div class="cont-div-L" style="width: 25%;">
+            <label style="cursor: pointer;" onclick="showChangeForm()">
+            <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+            <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+            </label>
+    
+            <label style="cursor: pointer;" onclick="showDeleteForm()">
+                <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+                <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+            </label>
+    
+        </div>
+    </div>
+</div>
+<div class="ti hide-cont" id="ti3">
+
+        <div class="ti-inner" id="test3">
+        <img src="assets/fb1.png" alt="">
+        <div class="ul-div" style="width: 80%;">
+        <ul>
+            <li class="ti-li-tilte" style="font-size: 26.7px;font-weight: 600; margin-left: 50px;">ماتش الهلال</li>
+            <li><div class="date" style="margin-left: 10px;"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></li>
+            <li class="ti-li-m" style="color: #47B574;"><i class="fa fa-ticket" style="padding-left:7px"></i><Input type="button" value="6" style=" border: none; background:none; cursor: text; color: #47B574;"> تذاكر</li>
+        </ul>
+        <div class="card-loc" style="color: #707070; margin: 30px 0px 15px 5px;"><i class="fa-solid fa-location-dot fa-lg" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده</div>
+        </div>
+        <i class="fa-solid fa-chevron-down fa-2xl chev-icon" id="a3" style="color: #D83F87; cursor: pointer;" onclick="m(this.id),changeArrow(this.id)"></i>
+        </div> 
+        
+        <div class="ticket-div hide-cont"  style="max-height: 152px; width: 96%; margin: auto; ">
+            <div class="cont-div-R" style="width: 75%;">
+                <h3 style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">ROYAL</h3>
+                <div class="CDR-m" style="display: flex; gap: 75px;">
+                <div style="display: flex; flex-direction:column; align-items: center; text-align: center; ;">
+                    <p>العدد</p>
+                    <h5>3 تذكرة</h5>
+                </div>
+                <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                    <p>رقم الصف</p>
+                    <h5>116</h5>
+                </div>
+                <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                    <p>ارقام المقاعد</p>
+                    <h5>2,3,4</h5>
+                </div>
+                </div>
+                <h3 class="hPrice" style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">250 ر.س</h3>
+                <div id="sw">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="sw-slider"></span>
+                    <span class="knob"></span>
+                </label>
+                </div>
+                <div class="CDR-m-l" style="display: flex; width: 100%; justify-content: space-between; display: none;">
+                <label style="cursor: pointer;" onclick="showChangeForm()">
+                    <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+                    <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+                    </label>
+            
+                    <label style="cursor: pointer;" onclick="showDeleteForm()">
+                        <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+                        <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+                    </label>
+                </div>
+            </div>
+        
+            <div class="cont-div-L" style="width: 25%;">
+                <label style="cursor: pointer;" onclick="showChangeForm()">
+                <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+                <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+                </label>
+        
+                <label style="cursor: pointer;" onclick="showDeleteForm()">
+                    <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+                    <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+                </label>
+        
+            </div>
+        </div>
+        <div class="ticket-div hide-cont"  style="max-height: 152px; width: 96%; margin: auto; ">
+            <div class="cont-div-R" style="width: 75%;">
+                <h3 style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">ROYAL</h3>
+                <div class="CDR-m" style="display: flex; gap: 75px;">
+                <div style="display: flex; flex-direction:column; align-items: center; text-align: center; ;">
+                    <p>العدد</p>
+                    <h5>3 تذكرة</h5>
+                </div>
+                <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                    <p>رقم الصف</p>
+                    <h5>116</h5>
+                </div>
+                <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                    <p>ارقام المقاعد</p>
+                    <h5>2,3,4</h5>
+                </div>
+                </div>
+                <h3 class="hPrice" style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">250 ر.س</h3>
+                <div id="sw">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="sw-slider"></span>
+                    <span class="knob"></span>
+                </label>
+                </div>
+                <div class="CDR-m-l" style="display: flex; width: 100%; justify-content: space-between; display: none;">
+                    <input type="button" class="sell-stat" name="" id="" value="مباعة بالكامل" style="background-color: #47B574;">
+                </div>
+            </div>
+        
+            <div class="cont-div-L" style="width: 25%;">
+                <label style="cursor: pointer;" onclick="showChangeForm()">
+                <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+                <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+                </label>
+        
+                <label style="cursor: pointer;" onclick="showDeleteForm()">
+                    <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+                    <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+                </label>
+        
+            </div>
+        </div>
+        <div class="ticket-div hide-cont"  style="max-height: 152px; width: 96%; margin: auto; ">
+            <div class="cont-div-R" style="width: 75%;">
+                <h3 style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">ROYAL</h3>
+                <div class="CDR-m" style="display: flex; gap: 75px;">
+                <div style="display: flex; flex-direction:column; align-items: center; text-align: center; ;">
+                    <p>العدد</p>
+                    <h5>3 تذكرة</h5>
+                </div>
+                <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                    <p>رقم الصف</p>
+                    <h5>116</h5>
+                </div>
+                <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                    <p>ارقام المقاعد</p>
+                    <h5>2,3,4</h5>
+                </div>
+                </div>
+                <h3 class="hPrice" style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">250 ر.س</h3>
+                <div id="sw">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="sw-slider"></span>
+                    <span class="knob"></span>
+                </label>
+                </div>
+                <div class="CDR-m-l" style="display: flex; width: 100%; justify-content: space-between; display: none;">
+                    <input type="button" class="sell-stat" name="" id="" value="مباعة بالكامل" style="background-color: #ED8A19;">
+                </div>
+            </div>
+        
+            <div class="cont-div-L" style="width: 25%;">
+                <label style="cursor: pointer;" onclick="showChangeForm()">
+                <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+                <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+                </label>
+        
+                <label style="cursor: pointer;" onclick="showDeleteForm()">
+                    <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+                    <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+                </label>
+        
+            </div>
+        </div>
+        <div class="ticket-div hide-cont"  style="max-height: 152px; width: 96%; margin: auto; ">
+            <div class="cont-div-R" style="width: 75%;">
+                <h3 style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">ROYAL</h3>
+                <div class="CDR-m" style="display: flex; gap: 75px;">
+                <div style="display: flex; flex-direction:column; align-items: center; text-align: center; ;">
+                    <p>العدد</p>
+                    <h5>3 تذكرة</h5>
+                </div>
+                <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                    <p>رقم الصف</p>
+                    <h5>116</h5>
+                </div>
+                <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                    <p>ارقام المقاعد</p>
+                    <h5>2,3,4</h5>
+                </div>
+                </div>
+                <h3 class="hPrice" style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">250 ر.س</h3>
+                <div id="sw">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="sw-slider"></span>
+                    <span class="knob"></span>
+                </label>
+                </div>
+                <div class="CDR-m-l" style="display: flex; width: 100%; justify-content: space-between; display: none;">
+                    <input type="button" class="sell-stat" name="" id="" value="مباعة بالكامل" style="background-color: #C92B28;">
+                </div>
+            </div>
+        
+            <div class="cont-div-L" style="width: 25%;">
+                <label style="cursor: pointer;" onclick="showChangeForm()">
+                <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+                <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+                </label>
+        
+                <label style="cursor: pointer;" onclick="showDeleteForm()">
+                    <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+                    <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+                </label>
+        
+            </div>
+        </div>
+</div>
+<div class="ti hide-cont" id="ti4">
+
+            <div class="ti-inner" id="test4">
+            <img src="assets/fb1.png" alt="">
+            <div class="ul-div" style="width: 80%;">
+            <ul>
+                <li class="ti-li-tilte" style="font-size: 26.7px;font-weight: 600; margin-left: 50px;">ماتش الهلال</li>
+                <li><div class="date" style="margin-left: 10px;"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></li>
+                <li class="ti-li-m" style="color: #47B574;"><i class="fa fa-ticket" style="padding-left:7px"></i><Input type="button" value="6" style=" border: none; background:none; cursor: text; color: #47B574;"> تذاكر</li>
+            </ul>
+            <div class="card-loc" style="color: #707070; margin: 30px 0px 15px 5px;"><i class="fa-solid fa-location-dot fa-lg" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده</div>
+            </div>
+            <i class="fa-solid fa-chevron-down fa-2xl chev-icon" id="a4" style="color: #D83F87; cursor: pointer;" onclick="m(this.id),changeArrow(this.id)"></i>
+            </div> 
+            
+            <div class="ticket-div hide-cont"  style="max-height: 152px; width: 96%; margin: auto; ">
+                <div class="cont-div-R" style="width: 75%;">
+                    <h3 style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">ROYAL</h3>
+                    <div class="CDR-m" style="display: flex; gap: 75px;">
+                    <div style="display: flex; flex-direction:column; align-items: center; text-align: center; ;">
+                        <p>العدد</p>
+                        <h5>3 تذكرة</h5>
+                    </div>
+                    <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                        <p>رقم الصف</p>
+                        <h5>116</h5>
+                    </div>
+                    <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                        <p>ارقام المقاعد</p>
+                        <h5>2,3,4</h5>
+                    </div>
+                    </div>
+                    <h3 class="hPrice" style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">250 ر.س</h3>
+                    <div id="sw">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="sw-slider"></span>
+                        <span class="knob"></span>
+                    </label>
+                    </div>
+                    <div class="CDR-m-l" style="display: flex; width: 100%; justify-content: space-between; display: none;">
+                    <label style="cursor: pointer;" onclick="showChangeForm()">
+                        <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+                        <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+                        </label>
+                
+                        <label style="cursor: pointer;" onclick="showDeleteForm()">
+                            <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+                            <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+                        </label>
+                    </div>
+                </div>
+            
+                <div class="cont-div-L" style="width: 25%;">
+                    <label style="cursor: pointer;" onclick="showChangeForm()">
+                    <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+                    <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+                    </label>
+            
+                    <label style="cursor: pointer;" onclick="showDeleteForm()">
+                        <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+                        <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+                    </label>
+            
+                </div>
+            </div>
+            <div class="ticket-div hide-cont"  style="max-height: 152px; width: 96%; margin: auto; ">
+                <div class="cont-div-R" style="width: 75%;">
+                    <h3 style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">ROYAL</h3>
+                    <div class="CDR-m" style="display: flex; gap: 75px;">
+                    <div style="display: flex; flex-direction:column; align-items: center; text-align: center; ;">
+                        <p>العدد</p>
+                        <h5>3 تذكرة</h5>
+                    </div>
+                    <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                        <p>رقم الصف</p>
+                        <h5>116</h5>
+                    </div>
+                    <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                        <p>ارقام المقاعد</p>
+                        <h5>2,3,4</h5>
+                    </div>
+                    </div>
+                    <h3 class="hPrice" style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">250 ر.س</h3>
+                    <div id="sw">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="sw-slider"></span>
+                        <span class="knob"></span>
+                    </label>
+                    </div>
+                    <div class="CDR-m-l" style="display: flex; width: 100%; justify-content: space-between; display: none;">
+                        <input type="button" class="sell-stat" name="" id="" value="مباعة بالكامل" style="background-color: #47B574;">
+                    </div>
+                </div>
+            
+                <div class="cont-div-L" style="width: 25%;">
+                    <label style="cursor: pointer;" onclick="showChangeForm()">
+                    <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+                    <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+                    </label>
+            
+                    <label style="cursor: pointer;" onclick="showDeleteForm()">
+                        <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+                        <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+                    </label>
+            
+                </div>
+            </div>
+            <div class="ticket-div hide-cont"  style="max-height: 152px; width: 96%; margin: auto; ">
+                <div class="cont-div-R" style="width: 75%;">
+                    <h3 style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">ROYAL</h3>
+                    <div class="CDR-m" style="display: flex; gap: 75px;">
+                    <div style="display: flex; flex-direction:column; align-items: center; text-align: center; ;">
+                        <p>العدد</p>
+                        <h5>3 تذكرة</h5>
+                    </div>
+                    <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                        <p>رقم الصف</p>
+                        <h5>116</h5>
+                    </div>
+                    <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                        <p>ارقام المقاعد</p>
+                        <h5>2,3,4</h5>
+                    </div>
+                    </div>
+                    <h3 class="hPrice" style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">250 ر.س</h3>
+                    <div id="sw">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="sw-slider"></span>
+                        <span class="knob"></span>
+                    </label>
+                    </div>
+                    <div class="CDR-m-l" style="display: flex; width: 100%; justify-content: space-between; display: none;">
+                        <input type="button" class="sell-stat" name="" id="" value="مباعة بالكامل" style="background-color: #ED8A19;">
+                    </div>
+                </div>
+            
+                <div class="cont-div-L" style="width: 25%;">
+                    <label style="cursor: pointer;" onclick="showChangeForm()">
+                    <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+                    <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+                    </label>
+            
+                    <label style="cursor: pointer;" onclick="showDeleteForm()">
+                        <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+                        <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+                    </label>
+            
+                </div>
+            </div>
+            <div class="ticket-div hide-cont"  style="max-height: 152px; width: 96%; margin: auto; ">
+                <div class="cont-div-R" style="width: 75%;">
+                    <h3 style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">ROYAL</h3>
+                    <div class="CDR-m" style="display: flex; gap: 75px;">
+                    <div style="display: flex; flex-direction:column; align-items: center; text-align: center; ;">
+                        <p>العدد</p>
+                        <h5>3 تذكرة</h5>
+                    </div>
+                    <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                        <p>رقم الصف</p>
+                        <h5>116</h5>
+                    </div>
+                    <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                        <p>ارقام المقاعد</p>
+                        <h5>2,3,4</h5>
+                    </div>
+                    </div>
+                    <h3 class="hPrice" style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">250 ر.س</h3>
+                    <div id="sw">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="sw-slider"></span>
+                        <span class="knob"></span>
+                    </label>
+                    </div>
+                    <div class="CDR-m-l" style="display: flex; width: 100%; justify-content: space-between; display: none;">
+                        <input type="button" class="sell-stat" name="" id="" value="مباعة بالكامل" style="background-color: #C92B28;">
+                    </div>
+                </div>
+            
+                <div class="cont-div-L" style="width: 25%;">
+                    <label style="cursor: pointer;" onclick="showChangeForm()">
+                    <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+                    <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+                    </label>
+            
+                    <label style="cursor: pointer;" onclick="showDeleteForm()">
+                        <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+                        <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+                    </label>
+            
+                </div>
+            </div>
+</div>
+<div class="ti hide-cont" id="ti5">
+
+                <div class="ti-inner" id="test5">
+                <img src="assets/fb1.png" alt="">
+                <div class="ul-div" style="width: 80%;">
+                <ul>
+                    <li class="ti-li-tilte" style="font-size: 26.7px;font-weight: 600; margin-left: 50px;">ماتش الهلال</li>
+                    <li><div class="date" style="margin-left: 10px;"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></li>
+                    <li class="ti-li-m" style="color: #47B574;"><i class="fa fa-ticket" style="padding-left:7px"></i><Input type="button" value="6" style=" border: none; background:none; cursor: text; color: #47B574;"> تذاكر</li>
+                </ul>
+                <div class="card-loc" style="color: #707070; margin: 30px 0px 15px 5px;"><i class="fa-solid fa-location-dot fa-lg" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده</div>
+                </div>
+                <i class="fa-solid fa-chevron-down fa-2xl chev-icon" id="a5" style="color: #D83F87; cursor: pointer;" onclick="m(this.id),changeArrow(this.id)"></i>
+                </div> 
+                
+                <div class="ticket-div hide-cont"  style="max-height: 152px; width: 96%; margin: auto; ">
+                    <div class="cont-div-R" style="width: 75%;">
+                        <h3 style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">ROYAL</h3>
+                        <div class="CDR-m" style="display: flex; gap: 75px;">
+                        <div style="display: flex; flex-direction:column; align-items: center; text-align: center; ;">
+                            <p>العدد</p>
+                            <h5>3 تذكرة</h5>
+                        </div>
+                        <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                            <p>رقم الصف</p>
+                            <h5>116</h5>
+                        </div>
+                        <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                            <p>ارقام المقاعد</p>
+                            <h5>2,3,4</h5>
+                        </div>
+                        </div>
+                        <h3 class="hPrice" style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">250 ر.س</h3>
+                        <div id="sw">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="sw-slider"></span>
+                            <span class="knob"></span>
+                        </label>
+                        </div>
+                        <div class="CDR-m-l" style="display: flex; width: 100%; justify-content: space-between; display: none;">
+                        <label style="cursor: pointer;" onclick="showChangeForm()">
+                            <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+                            <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+                            </label>
+                    
+                            <label style="cursor: pointer;" onclick="showDeleteForm()">
+                                <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+                                <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+                            </label>
+                        </div>
+                    </div>
+                
+                    <div class="cont-div-L" style="width: 25%;">
+                        <label style="cursor: pointer;" onclick="showChangeForm()">
+                        <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+                        <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+                        </label>
+                
+                        <label style="cursor: pointer;" onclick="showDeleteForm()">
+                            <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+                            <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+                        </label>
+                
+                    </div>
+                </div>
+                <div class="ticket-div hide-cont"  style="max-height: 152px; width: 96%; margin: auto; ">
+                    <div class="cont-div-R" style="width: 75%;">
+                        <h3 style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">ROYAL</h3>
+                        <div class="CDR-m" style="display: flex; gap: 75px;">
+                        <div style="display: flex; flex-direction:column; align-items: center; text-align: center; ;">
+                            <p>العدد</p>
+                            <h5>3 تذكرة</h5>
+                        </div>
+                        <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                            <p>رقم الصف</p>
+                            <h5>116</h5>
+                        </div>
+                        <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                            <p>ارقام المقاعد</p>
+                            <h5>2,3,4</h5>
+                        </div>
+                        </div>
+                        <h3 class="hPrice" style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">250 ر.س</h3>
+                        <div id="sw">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="sw-slider"></span>
+                            <span class="knob"></span>
+                        </label>
+                        </div>
+                        <div class="CDR-m-l" style="display: flex; width: 100%; justify-content: space-between; display: none;">
+                            <input type="button" class="sell-stat" name="" id="" value="مباعة بالكامل" style="background-color: #47B574;">
+                        </div>
+                    </div>
+                
+                    <div class="cont-div-L" style="width: 25%;">
+                        <label style="cursor: pointer;" onclick="showChangeForm()">
+                        <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+                        <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+                        </label>
+                
+                        <label style="cursor: pointer;" onclick="showDeleteForm()">
+                            <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+                            <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+                        </label>
+                
+                    </div>
+                </div>
+                <div class="ticket-div hide-cont"  style="max-height: 152px; width: 96%; margin: auto; ">
+                    <div class="cont-div-R" style="width: 75%;">
+                        <h3 style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">ROYAL</h3>
+                        <div class="CDR-m" style="display: flex; gap: 75px;">
+                        <div style="display: flex; flex-direction:column; align-items: center; text-align: center; ;">
+                            <p>العدد</p>
+                            <h5>3 تذكرة</h5>
+                        </div>
+                        <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                            <p>رقم الصف</p>
+                            <h5>116</h5>
+                        </div>
+                        <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                            <p>ارقام المقاعد</p>
+                            <h5>2,3,4</h5>
+                        </div>
+                        </div>
+                        <h3 class="hPrice" style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">250 ر.س</h3>
+                        <div id="sw">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="sw-slider"></span>
+                            <span class="knob"></span>
+                        </label>
+                        </div>
+                        <div class="CDR-m-l" style="display: flex; width: 100%; justify-content: space-between; display: none;">
+                            <input type="button" class="sell-stat" name="" id="" value="مباعة بالكامل" style="background-color: #ED8A19;">
+                        </div>
+                    </div>
+                
+                    <div class="cont-div-L" style="width: 25%;">
+                        <label style="cursor: pointer;" onclick="showChangeForm()">
+                        <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+                        <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+                        </label>
+                
+                        <label style="cursor: pointer;" onclick="showDeleteForm()">
+                            <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+                            <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+                        </label>
+                
+                    </div>
+                </div>
+                <div class="ticket-div hide-cont"  style="max-height: 152px; width: 96%; margin: auto; ">
+                    <div class="cont-div-R" style="width: 75%;">
+                        <h3 style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">ROYAL</h3>
+                        <div class="CDR-m" style="display: flex; gap: 75px;">
+                        <div style="display: flex; flex-direction:column; align-items: center; text-align: center; ;">
+                            <p>العدد</p>
+                            <h5>3 تذكرة</h5>
+                        </div>
+                        <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                            <p>رقم الصف</p>
+                            <h5>116</h5>
+                        </div>
+                        <div style="display: flex; flex-direction:column; align-items: center; text-align: center;">
+                            <p>ارقام المقاعد</p>
+                            <h5>2,3,4</h5>
+                        </div>
+                        </div>
+                        <h3 class="hPrice" style="margin: 0px 15px 0px 0px; color: #5f22d9; font-weight: 600; font-size: 26.7px;">250 ر.س</h3>
+                        <div id="sw">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="sw-slider"></span>
+                            <span class="knob"></span>
+                        </label>
+                        </div>
+                        <div class="CDR-m-l" style="display: flex; width: 100%; justify-content: space-between; display: none;">
+                            <input type="button" class="sell-stat" name="" id="" value="مباعة بالكامل" style="background-color: #C92B28;">
+                        </div>
+                    </div>
+                
+                    <div class="cont-div-L" style="width: 25%;">
+                        <label style="cursor: pointer;" onclick="showChangeForm()">
+                        <i class="fa-solid fa-pen fa-xl" style="color: #D83F87; margin-left: 16px;"></i>
+                        <input type="button" name="" id="" value="تعديل السعر" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #D83F87;">
+                        </label>
+                
+                        <label style="cursor: pointer;" onclick="showDeleteForm()">
+                            <i class="fa-regular fa-trash-can fa-xl" style="color: #C92B28; margin-left: 16px;"></i>
+                            <input type="button" name="" id="" value="حذف" style="background:none; border: none; font-size: 14px;font-weight: 600; color: #C92B28;">
+                        </label>
+                
+                    </div>
+                </div>
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<footer> 
+    <div class="footer"> 
+    <div class="footer-R">
+    <img style="width:64px; height:48px; margin-bottom: 20px;" src="assets/tick-logo.png">
+    <h5 style="color: #D83F87; font-size: 26.7px; font-weight: 600;">تك هب</h5>
+    <h5 style="color: #9C9C9C;  font-size: 26.7px; font-weight: 600; margin-bottom: 114px;">اختيارك الأول الامن والمضمون</h5>
+    <ul>
+        <li><img src="assets/facebook.png"></li>
+        <li><img src="assets/telegram.png" alt=""></li>
+        <li><img src="assets/twitter.png" alt=""></li>
+        <li><img src="assets/wt-icon.png" alt=""></li>
+    </ul>
+    </div>
+
+    <div class="footer-L">
+        <h5 style="font-size: 26.7px;font-weight: 600; color: #9C9C9C; margin-bottom: 36px;">لمتابعة اخر عروضنا واخبارنا</h5>
+        <h6 style="font-size: 22.2px;font-weight:500 ; color: #707070;margin-bottom: 56px; width: 411px;">قم ادخل بريدك الالكتروني لتكون اول من يعرف عروضنا أخبارنا بشكل حصري</h6>
+
+        <form class="email-bar">
+            <i class="fa-regular fa-envelope fa-2xl" style="border: none;padding: 5px;padding-top: 7px; margin-left: 10px;"></i>
+            <input type="email" placeholder="بريدك الالكتروني">
+            <button class="email-btn"><i class="fa-solid fa-arrow-left fa-xl"></i></button>
+        </form>
+
+    </div>
+
+</div>
+<div class="copy-rights">
+    <ul>
+        <li>جميع الحقوق محفوظة @</li>
+        <li onclick="window.location.href='termCond.html';" style="cursor: pointer;">الشروط والاحكام</li>
+        <li onclick="window.location.href='privacy.html';" style="cursor: pointer;">الخصوصية</li>
+    </ul>
+
+    <a href="#navb" style="width: 64px; height: 64px;"><i class="fa-solid fa-arrow-up fa-2xl" style="color: green;"></i></a>
+    
+</div>
+</footer>
+
+
+<script src="js/country-states.js"></script>
+<script>
+var user_country_code = "";
+
+(() => {
+  // script https://www.html-code-generator.com/html/drop-down/state-name
+
+  // Get the country name and state name from the imported script.
+  const country_array = country_and_states.country;
+  const states_array = country_and_states.states;
+  
+  const id_state_option = document.getElementById("state");
+  const id_country_option = document.getElementById("country");
+
+  const createCountryNamesDropdown = () => {
+      let option =  '';
+      option += '<option value="" ">اختر الدولة</option>';
+
+      for(let country_code in country_array){
+          // set selected option user country
+          let selected = (country_code == user_country_code) ? ' selected' : '';
+          option += '<option value="'+country_code+'"'+selected+'>'+country_array[country_code]+'</option>';
+      }
+      id_country_option.innerHTML = option;
+  };
+
+  const createStatesNamesDropdown = () => {
+      let selected_country_code = id_country_option.value;
+      // get state names
+      let state_names = states_array[selected_country_code];
+
+      // if invalid country code
+      if(!state_names){
+          id_state_option.innerHTML = '<option>اختر المدينة</option>';
+          return;
+      }
+      let option = '';
+      option += '<select id="state">';
+      option += '<option>اختر المدينة</option>';
+      for (let i = 0; i < state_names.length; i++) {
+          option += '<option value="'+state_names[i].code+'">'+state_names[i].name+'</option>';
+      }
+      option += '</select>';
+      id_state_option.innerHTML = option;
+  };
+
+  // country select change event
+  id_country_option.addEventListener('change', createStatesNamesDropdown);
+
+  createCountryNamesDropdown();
+  createStatesNamesDropdown();
+})();
+</script>
+<script>
+let incrementButton = document.getElementById("increment");
+let decrementButton = document.getElementById("decrement");
+let counter = document.getElementById("counter");
+let count = 0;
+
+incrementButton.addEventListener("click", function () {
+  count++;
+  counter.textContent = count;
+  updateStyles(count);
+});
+
+decrementButton.addEventListener("click", () => {
+  count--;
+  counter.textContent = count;
+  updateStyles(count);
+});
+
+function updateStyles(count) {
+  if (count < 0) {
+    counter.classList.add("negative");
+  } else if (count > 0) {
+    counter.classList.add("positive");
+  } else {
+    counter.className = "";
+  }
+}
+</script>
+<script src="https://kit.fontawesome.com/c6b51c86ab.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/app.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/script2.js"></script>
+<script type="text/javascript" src="js/slider1.js"></script>
+<script src="js/slider2.js"></script>
+<script src="js/owlSlider.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+
+
+</body>
+</html>

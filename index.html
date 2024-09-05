@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <title>TIC</title>
+</head>
+<body>
+
+<nav class="navb" id="navb">
+    <a href="index.html"><img src="assets/tick-logo.png" alt="logo" class="tick-logo"></a>
+        <ul class="nav-ul" id="nav-ul">
+            <li class="nav-li "><a href="events.html">الأقسام</a></li>
+            <li class="nav-li "><a href="knowUs.html">تعرف علينا</a></li>
+            <li class="nav-li "><a href="contactUs.html">تواصل معنا</a></li>
+            <a class="lang" href="#">EN</a>
+        </ul>
+
+        <form action="" class="search-bar">
+            <input type="text" placeholder="ابحث هنا ....">
+            <button class="search-btn" type="submit"><img src="assets/search-icon.png"></button>
+        </form>
+
+        <form class="sell-btn" onclick="showModal()">
+        <i class="fa fa-ticket" style="padding-left:10px"></i>
+        <input type="button" value="بيع تذكرت" >
+        </form>
+        <input type="button" class="loginBtn" value="سجل الدخول" onclick="showModal()">
+</nav>
+<nav class="navb-m">
+    <a href="index.html"><img src="assets/tick-logo.png" alt="logo" class="tick-logo"></a>
+    <form action="" class="search-bar">
+        <input type="text" placeholder="ابحث هنا ....">
+        <button class="search-btn" type="submit"><img src="assets/search-icon.png"></button>
+    </form>
+    <i class="fa-solid fa-bars fa-xl" style="color: #AD72FE;" onclick="showNavbM()"></i>
+</nav>
+
+<div class="navb-m-ol">
+    <div style="display: flex; flex-direction: row; margin:64px auto 100px auto; align-items: center; height:50px; gap: 20px;">
+    <i class="fa-solid fa-x fa-xl" style="color: #c92b28; margin-left: 30px;" onclick="closeNavbM()"></i>
+    <form class="sell-btn" onclick="showModal()">
+        <i class="fa fa-ticket" style="padding-left:10px"></i>
+        <input type="button" value="بيع تذكرت" >
+        </form>
+        <input type="button" class="loginBtn" value="سجل الدخول" onclick="showModal()">
+    </div>
+    <ul class="nav-ul" id="nav-ul" >
+        <li class="nav-li "><a href="events.html">الأقسام</a></li>
+        <li class="nav-li "><a href="knowUs.html">تعرف علينا</a></li>
+        <li class="nav-li "><a href="contactUs.html">تواصل معنا</a></li>
+        <a class="lang" href="#">EN</a>
+    </ul>
+</div>
+
+
+
+
+<div class="overlay" onclick="closeModal()"></div>
+<div class="overlay4" onclick="overlay4()"></div>
+
+<div class="login-card">
+<div class="login-card-R">
+<h4 style="font-weight: 600; font-size: 26.7px; padding: 0; margin: 0;">تسجيل الدخول الى حسابك</h4>
+<h6 style="font-size: 13.6px; color: #707070; padding: 0; margin: 0;">قم بكتابة البريد الالكتروني وكلمة المرور الخاصة بك</h6>
+<form action="" class="login-info" >
+<div class="login-field" style="margin-bottom: 30px;">        
+    <img src="assets/mail.png">
+    <input type="email" id="email" name="email" placeholder="البريد الالكتروني" required>
+</div>
+<div class="login-field">        
+    <img src="assets/lock.png">
+    <input type="password" id="pwd" name="pwd" placeholder="كلمة المرور" required>
+    <button type="button" onclick="myFunction('pwd','eyeicon')"><i class="fa-regular fa-eye fa-xl" style="color: #9C9C9C;" id="eyeicon"></i></button>
+</div>
+<a onclick="showblue()" class="aLink">هل نسيت كلمة المرور ؟</a>
+<button class="login-btn" type="submit" >تسجيل الدخول</button>
+<h6 style="margin-top: 27px; cursor: pointer;">ليس لديك حساب؟ <a style="color: #5f22d9; text-decoration: none; cursor: pointer;" onclick="window.location.href='regPage.html'">اشترك الان</a></h6>
+</form>
+</div>
+<div class="login-card-L">
+<div class="slider-wrapper">
+<div class="slider-inner" id="box">
+
+        <div class="slider-item">
+            <div class="user-card">
+                <div style="display: flex; flex-direction: row; gap:5px">
+                <img  style="border-radius: 50%; width: 50px; height:50px;" src="assets/person-icon.png">
+                <div style="display: flex; flex-direction: column; align-items:center; ">
+                    <p style="color:white">محمد محمود</p>
+                    <img src="assets/stars.png" style="width: 120px; height: 20px;">
+                </div>
+                </div>
+                <p style="color:gray;font-size: small; text-align: start; margin-left: 35px;">اكثر منصة امنه ومضمونة لحجز تذاكر الفعاليات هذه هي معاملتي الاولى ولن تكون الأخيره أنصح جداً بالتعامل معهم حيث يملكون سرعة وسهولة في التنفيذ لشراء التذاكر</p>
+            </div>
+        </div>
+        <div class="slider-item">
+            <div class="user-card">
+                <div style="display: flex; flex-direction: row; gap:5px">
+                <img  style="border-radius: 50%; width: 50px; height:50px;" src="assets/person-icon.png">
+                <div style="display: flex; flex-direction: column; align-items:center; ">
+                    <p style="color:white">محمد محمود</p>
+                    <img src="assets/stars.png" style="width: 120px; height: 20px;">
+                </div>
+                </div>
+                <p style="color:gray;font-size: small; text-align: start; margin-left: 35px;">اكثر منصة امنه ومضمونة لحجز تذاكر الفعاليات هذه هي معاملتي الاولى ولن تكون الأخيره أنصح جداً بالتعامل معهم حيث يملكون سرعة وسهولة في التنفيذ لشراء التذاكر</p>
+            </div>
+        </div>
+        <div class="slider-item">
+            <div class="user-card">
+                <div style="display: flex; flex-direction: row; gap:5px">
+                <img  style="border-radius: 50%; width: 50px; height:50px;" src="assets/person-icon.png">
+                <div style="display: flex; flex-direction: column; align-items:center; ">
+                    <p style="color:white">محمد محمود</p>
+                    <img src="assets/stars.png" style="width: 120px; height: 20px;">
+                </div>
+                </div>
+                <p style="color:gray;font-size: small; text-align: start; margin-left: 35px;">اكثر منصة امنه ومضمونة لحجز تذاكر الفعاليات هذه هي معاملتي الاولى ولن تكون الأخيره أنصح جداً بالتعامل معهم حيث يملكون سرعة وسهولة في التنفيذ لشراء التذاكر</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div>
+<button class="next"  style="display: none;">
+</button>
+<button class="prev" style="display: none;">
+</button>
+</div>
+<div>
+    <ul class="dots" >
+        <li class="li0"></li>
+        <li class="li1"></li>
+        <li class="li2 active"></li>
+    </ul>
+</div>
+</div>
+
+</div>
+
+<div class="forget-form">
+    <img src="assets/icons8-protect.gif" alt="">
+    <h1 style="font-size: 26.7px; font-weight: 600; margin-bottom: 30px;">نسيت كلمة المرور</h1>
+    <p style="font-size: 13.6px; color: #707070; width: 50%; text-align: center; margin-bottom: 62px;">لا تقلق سوف نقوم بارسال رابط لاعادة تعيين كلمة المرور الخاصة بك</p>
+    <form action="" class="login-info">
+    <div class="login-field" style="margin-bottom: 60px; width: 528px;">
+        <img src="assets/mail.png">
+        <input type="email" id="email2" name="email" placeholder="البريد الالكتروني" required>
+    </div>
+    <input class="login-btn" type="button"  style="width: 532px; margin-bottom: 35px;" onclick="showCheckForm()" value="ارسال">
+    <h6 style="font-size: 14px; font-weight: 600; color: #9C9C9C;">تذكرت كلمة المرور؟<a style="color: #5f22d9; cursor: pointer; " onclick="showModal()">  تسجيل الدخول</a></h6>
+    </form>
+</div>
+
+
+<div class="check-form">
+    <img src="assets/icons8-mail.gif" alt="" style="margin-bottom: 35px;">
+    <h1 style="font-size: 26.7px; font-weight: 600; margin-bottom: 30px;">اطلع على صندوق بريدك الاكتروني</h1>
+    <p style="font-size: 13.6px; color: #707070; width: 50%; text-align: center; margin-bottom: 62px;">لقد ارسلنا اليك رابط اعادة تتعين كلمة المرور على mahmoud@gmail.com</p>
+    <form action="" class="login-info">
+    <button class="login-btn" type="submit"  style="width: 532px; margin-bottom: 36px;" onclick="mail.google.com">افتح بريدك الالكتروني</button>
+    <h6 style="font-size: 14px; font-weight: 600; color: #9C9C9C; margin-bottom: 76px;">لم تستقبل اى بريد منا؟<a style="color: #D83F87; cursor: pointer; ">  اعادة ارسال</a></h6>
+    <h6 style="font-size: 14px; font-weight: 600; color: #9C9C9C;">تذكرت كلمة المرور؟<a style="color: #5f22d9; cursor: pointer; " onclick="showModal()">  تسجيل الدخول</a></h6>
+    </form>
+</div>
+
+
+
+
+
+
+<div class="header-cont">
+    <h1><span style="color:#a86ff7;">مرحباً بكم </span>في<span style="color:#a86ff7;"> تك هب </span></h1>
+    <h1>حيث يمكنك استكشاف كل الفعاليات التي ترغب بها</h1>
+    <h4>اختيارك الأول الأمن و المضمون لشراء او بيع تذاكر الفعاليات داخل الممكلة</h4>
+    <div class="co">
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+    </div>
+
+
+    <div class="slider">
+        <div class="list">
+            <div class="item">
+                <img src="assets/1.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="assets/2.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="assets/3.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="assets/4.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="assets/5.jpg" alt="">
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="prev"></button>
+            <button id="next"></button>
+        </div>
+        <ul class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    
+    
+    </div>
+    
+
+</div>
+<div class="main-cont">
+<h2>الفعاليات <span style="color:#f426a7;">المتاحة</span></h2>
+<h5 style="font-size:15px; font-weight: bold; color: gray;">اطلع على الفعاليات المتاحة الان بكل سهولة عن طريق الأقسام</h5>
+
+<div class="cont-title">
+    <button id="b1" class="active" onclick="activeBtn('b1'),dB('crds')">الكل</button>
+    <button id="b2" onclick="activeBtn('b2',dB('crds2'))">دوري روشن</button>
+    <button id="b3" onclick="activeBtn('b3',dB('crds3'))">فعاليات العيد</button>
+    <button id="b4" onclick="activeBtn('b4',dB('crds4'))">تقويم الرياض</button>
+    <button id="b5" onclick="activeBtn('b5',dB('crds5'))">فعاليات طوال السنة</button>
+    </div>
+    
+    
+    <div class="crds">
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc">
+            <i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i>
+            <p>مسرح بنش مارك , جده , الممكلة العربية السعودية</p>
+            </div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="crds2 dbn">
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="crds3 dbn">
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="crds4 dbn">
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/fb1.png">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="crds5 dbn">
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/tamer.jpeg">
+            <div class="test">  
+            <div class="card-title">
+            <div class="title">حفلة تامر عاشور</div>
+            <div class="date"><i class="fa-regular fa-calendar-days fa-xs" style="color: #50d6cb; width: 18px; height: 20px;"></i> ابريل 12</div></div>
+            <div class="card-loc"><i class="fa-solid fa-location-dot" style="color: #a86ff7; margin-left: 8px;"></i> مسرح بنش مارك , جده , الممكلة العربية السعودية</div>
+            <div class="card-button">
+            <button class="card-btn1" onclick="showModal()">اشتري تذكرتك الان</button>
+            <button class="card-btn2" onclick="showModal()">بيع تذكرتك</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <button onclick="window.location.href='events.html';" class= "card-btn3" >رؤية جميع الفعاليات المتاحة</button>
+
+
+
+
+
+<h3 class="pay-title" >طريقة شراء التذكرة</h3>
+<div class="pay">
+
+    <div class="pay-way">
+        <div class="ways">
+            <img src="assets/ticket.png">
+            <h4 style="color: #5f22d9;">اختر تذكرتك</h4>
+        </div>
+    </div>
+    <div class="pay-way">
+        <div class="ways">
+            <img src="assets/credit-card.png">
+            <h4 style="color: #5f22d9;">قم بالدفع</h4>
+        </div>
+    </div>
+    <div class="pay-way">
+        <div class="ways">
+            <img src="assets/task-actions.png">
+            <h4 style="color: #5f22d9;">تذكرتك جاهزة الان</h4>
+        </div>
+    </div>
+
+</div>
+
+<h3 class="pay-title">طريقة بيع التذكرة</h3>
+<div class="pay">
+
+    <div class="pay-way">
+        <div class="ways">
+            <img src="assets/inventory.png">
+            <h4 style="color: green;">أدخل التفاصيل</h4>
+        </div>
+    </div>
+    <div class="pay-way">
+        <div class="ways">
+            <img src="assets/file.png">
+            <h4 style="color: green;">نقوم بمراجعة طلبك</h4>
+        </div>
+    </div>
+    <div class="pay-way">
+        <div class="ways">
+            <img src="assets/accounting.png">
+            <h4 style="color: green;">ابدء في جمع الارباح</h4>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+<div class="mid-div">
+<div class="mid-div-R">
+<h1 style="font-size: 47.2px; font-weight: 600; color: #ffff;">تقييمات</h1>
+<p style="font-size: 19.5px; font-weight: normal; color: #9C9C9C;">عملائنا الكرام</p>
+<div class="mid-div-btns">
+<button class="prev1">
+<i class='fa-solid fa-arrow-left fa-xl' style='color: gray;'></i>
+</button>
+<button class="next1" >
+<i class='fa-solid fa-arrow-right fa-xl' style='color: #ffff'></i>
+</button>
+</div>
+</div>
+
+
+<div class="mid-div-L">
+        <div class="slider-wrap" style="top: 25%;">
+    
+            <div class="slider-in" id="box">
+                <div class="slider-items" style="width: 560px; height: 402.71px;">
+                    <div class="user-card um" style="width: 560px; height: 402.71px; padding: 45px;">
+                        <div class="userP" style="display: flex; flex-direction: row; gap:20px ;margin-bottom: 20px;">
+                        <img class="userImg"  style="border-radius: 50%; width: 80px; height:80px;" src="assets/person-icon.png">
+                            <div style="display: flex; flex-direction: column; align-items:center; align-items: flex-start; ">
+                            <p style="color:white; font-size: 26.7px; font-weight: 600;" >محمد محمود</p>
+                            <img class="str" src="assets/stars.png" style="width: 209px; height: 30px;">
+                            </div>
+                        </div>
+                        <p  style="color:gray;font-size: 22.2px; text-align: start; margin-left: 35px;">اكثر منصة امنه ومضمونة لحجز تذاكر الفعاليات هذه هي معاملتي الاولى ولن تكون الأخيره أنصح جداً بالتعامل معهم حيث يملكون سرعة وسهولة في التنفيذ لشراء التذاكر</p>
+                    </div>
+                </div>
+                <div class="slider-items" style="width: 560px; height: 402.71px;">
+                    <div class="user-card um" style="width: 560px; height: 402.71px; padding: 45px;">
+                        <div style="display: flex; flex-direction: row; gap:20px ;margin-bottom: 20px;">
+                        <img class="userImg"  style="border-radius: 50%; width: 80px; height:80px;" src="assets/person-icon.png">
+                            <div style="display: flex; flex-direction: column; align-items:center; align-items: flex-start; ">
+                            <p style="color:white; font-size: 26.7px; font-weight: 600;" >محمد محمود</p>
+                            <img class="str" src="assets/stars.png" style="width: 209px; height: 30px;">
+                            </div>
+                        </div>
+                        <p style="color:gray;font-size: 22.2px; text-align: start; margin-left: 35px;">اكثر منصة امنه ومضمونة لحجز تذاكر الفعاليات هذه هي معاملتي الاولى ولن تكون الأخيره أنصح جداً بالتعامل معهم حيث يملكون سرعة وسهولة في التنفيذ لشراء التذاكر</p>
+                    </div>
+                </div>
+                <div class="slider-items" style="width: 560px; height: 402.71px;">
+                    <div class="user-card um" style="width: 560px; height: 402.71px; padding: 45px;">
+                        <div style="display: flex; flex-direction: row; gap:20px ;margin-bottom: 20px;">
+                        <img class="userImg"  style="border-radius: 50%; width: 80px; height:80px;" src="assets/person-icon.png">
+                            <div style="display: flex; flex-direction: column; align-items:center; align-items: flex-start; ">
+                            <p style="color:white; font-size: 26.7px; font-weight: 600;" >محمد محمود</p>
+                            <img class="str" src="assets/stars.png" style="width: 209px; height: 30px;">
+                            </div>
+                        </div>
+                        <p style="color:gray;font-size: 22.2px; text-align: start; margin-left: 35px;">اكثر منصة امنه ومضمونة لحجز تذاكر الفعاليات هذه هي معاملتي الاولى ولن تكون الأخيره أنصح جداً بالتعامل معهم حيث يملكون سرعة وسهولة في التنفيذ لشراء التذاكر</p>
+                    </div>
+                </div>
+                <div class="slider-items" style="width: 560px; height: 402.71px;">
+                    <div class="user-card um" style="width: 560px; height: 402.71px; padding: 45px;">
+                        <div style="display: flex; flex-direction: row; gap:20px ;margin-bottom: 20px;">
+                        <img class="userImg"  style="border-radius: 50%; width: 80px; height:80px;" src="assets/person-icon.png">
+                            <div style="display: flex; flex-direction: column; align-items:center; align-items: flex-start; ">
+                            <p style="color:white; font-size: 26.7px; font-weight: 600;" >محمد محمود</p>
+                            <img class="str" src="assets/stars.png" style="width: 209px; height: 30px;">
+                            </div>
+                        </div>
+                        <p style="color:gray;font-size: 22.2px; text-align: start; margin-left: 35px;">اكثر منصة امنه ومضمونة لحجز تذاكر الفعاليات هذه هي معاملتي الاولى ولن تكون الأخيره أنصح جداً بالتعامل معهم حيث يملكون سرعة وسهولة في التنفيذ لشراء التذاكر</p>
+                    </div>
+                </div>
+                <div class="slider-items" style="width: 560px; height: 402.71px;">
+                    <div class="user-card um" style="width: 560px; height: 402.71px; padding: 45px;">
+                        <div style="display: flex; flex-direction: row; gap:20px ;margin-bottom: 20px;">
+                        <img class="userImg"  style="border-radius: 50%; width: 80px; height:80px;" src="assets/person-icon.png">
+                            <div style="display: flex; flex-direction: column; align-items:center; align-items: flex-start; ">
+                            <p style="color:white; font-size: 26.7px; font-weight: 600;" >محمد محمود</p>
+                            <img class="str" src="assets/stars.png" style="width: 209px; height: 30px;">
+                            </div>
+                        </div>
+                        <p style="color:gray;font-size: 22.2px; text-align: start; margin-left: 35px;">اكثر منصة امنه ومضمونة لحجز تذاكر الفعاليات هذه هي معاملتي الاولى ولن تكون الأخيره أنصح جداً بالتعامل معهم حيث يملكون سرعة وسهولة في التنفيذ لشراء التذاكر</p>
+                    </div>
+                </div>
+                <div class="slider-items" style="width: 560px; height: 402.71px;">
+                    <div class="user-card um" style="width: 560px; height: 402.71px; padding: 45px;">
+                        <div style="display: flex; flex-direction: row; gap:20px ;margin-bottom: 20px;">
+                        <img class="userImg"  style="border-radius: 50%; width: 80px; height:80px;" src="assets/person-icon.png">
+                            <div style="display: flex; flex-direction: column; align-items:center; align-items: flex-start; ">
+                            <p style="color:white; font-size: 26.7px; font-weight: 600;" >محمد محمود</p>
+                            <img class="str" src="assets/stars.png" style="width: 209px; height: 30px;">
+                            </div>
+                        </div>
+                        <p style="color:gray;font-size: 22.2px; text-align: start; margin-left: 35px;">اكثر منصة امنه ومضمونة لحجز تذاكر الفعاليات هذه هي معاملتي الاولى ولن تكون الأخيره أنصح جداً بالتعامل معهم حيث يملكون سرعة وسهولة في التنفيذ لشراء التذاكر</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+</div>
+
+<div class="mid-title">
+<h5>تذاكرنا السابقة</h5>
+<h3>تذاكر فعاليات <span style="color: red;"> قمنا ببيعها</span> داخل موقعنا </h3>
+<h5 style="color: rgb(94, 94, 94);">عدد من تذاكرنا المباعة على الموقع خلال الفتره السابقة</h5>
+</div>
+
+
+<div class="owlSlider">
+                    <div class="owl-carousel">
+                        <div class="owlSlider-card">
+                            <div class="d-flex justify-content-center align-items-center mb-4">
+                                <img src="assets/E1.png" alt="" >
+                            </div>
+                        </div>
+                        <div class="owlSlider-card">
+                            <div class="d-flex justify-content-center align-items-center mb-4">
+                                <img src="assets/E2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="owlSlider-card">
+                            <div class="d-flex justify-content-center align-items-center mb-4">
+                                <img src="assets/E3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="owlSlider-card">
+                            <div class="d-flex justify-content-center align-items-center mb-4">
+                                <img src="assets/apex-legends-season-3-2019-4k-i3-1920x1080.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+</div>
+
+
+
+<footer> 
+    <div class="footer"> 
+    <div class="footer-R">
+    <img style="width:64px; height:48px; margin-bottom: 20px;" src="assets/tick-logo.png">
+    <h5 style="color: #D83F87; font-size: 26.7px; font-weight: 600;">تك هب</h5>
+    <h5 style="color: #9C9C9C;  font-size: 26.7px; font-weight: 600; margin-bottom: 114px;">اختيارك الأول الامن والمضمون</h5>
+    <ul>
+        <li><img src="assets/facebook.png"></li>
+        <li><img src="assets/telegram.png" alt=""></li>
+        <li><img src="assets/twitter.png" alt=""></li>
+        <li><img src="assets/wt-icon.png" alt=""></li>
+    </ul>
+    </div>
+
+    <div class="footer-L">
+        <h5 style="font-size: 26.7px;font-weight: 600; color: #9C9C9C; margin-bottom: 36px;">لمتابعة اخر عروضنا واخبارنا</h5>
+        <h6 style="font-size: 22.2px;font-weight:500 ; color: #707070;margin-bottom: 56px; width: 411px;">قم ادخل بريدك الالكتروني لتكون اول من يعرف عروضنا أخبارنا بشكل حصري</h6>
+
+        <form class="email-bar">
+            <i class="fa-regular fa-envelope fa-2xl" style="border: none;padding: 5px;padding-top: 7px; margin-left: 10px;"></i>
+            <input type="email" placeholder="بريدك الالكتروني">
+            <button class="email-btn"><i class="fa-solid fa-arrow-left fa-xl"></i></button>
+        </form>
+
+    </div>
+
+</div>
+<div class="copy-rights">
+    <ul>
+        <li>جميع الحقوق محفوظة @</li>
+        <li onclick="window.location.href='termCond.html';" style="cursor: pointer;">الشروط والاحكام</li>
+        <li onclick="window.location.href='privacy.html';" style="cursor: pointer;">الخصوصية</li>
+    </ul>
+
+    <a href="#navb" style="width: 64px; height: 64px;"><i class="fa-solid fa-arrow-up fa-2xl" style="color: green;"></i></a>
+    
+</div>
+</footer>
+
+<script src="js/country-states.js"></script>
+<script>
+var user_country_code = "";
+
+(() => {
+  // script https://www.html-code-generator.com/html/drop-down/state-name
+
+  // Get the country name and state name from the imported script.
+  const country_array = country_and_states.country;
+  const states_array = country_and_states.states;
+  
+  const id_state_option = document.getElementById("state");
+  const id_country_option = document.getElementById("country");
+
+const createCountryNamesDropdown = () => {
+    let option =  '';
+    option += '<option value="" ">اختر الدولة</option>';
+
+    for(let country_code in country_array){
+          // set selected option user country
+        let selected = (country_code == user_country_code) ? ' selected' : '';
+        option += '<option value="'+country_code+'"'+selected+'>'+country_array[country_code]+'</option>';
+    }
+    id_country_option.innerHTML = option;
+  };
+
+  const createStatesNamesDropdown = () => {
+      let selected_country_code = id_country_option.value;
+      // get state names
+      let state_names = states_array[selected_country_code];
+
+      // if invalid country code
+      if(!state_names){
+          id_state_option.innerHTML = '<option>اختر المدينة</option>';
+          return;
+      }
+      let option = '';
+      option += '<select id="state">';
+      option += '<option>اختر المدينة</option>';
+      for (let i = 0; i < state_names.length; i++) {
+          option += '<option value="'+state_names[i].code+'">'+state_names[i].name+'</option>';
+      }
+      option += '</select>';
+      id_state_option.innerHTML = option;
+  };
+
+  // country select change event
+  id_country_option.addEventListener('change', createStatesNamesDropdown);
+
+  createCountryNamesDropdown();
+  createStatesNamesDropdown();
+})();
+</script>
+<script src="https://kit.fontawesome.com/c6b51c86ab.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/app.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/slider1.js"></script>
+<script src="js/slider2.js"></script>
+<script src="js/owlSlider.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+
+
+
+</body>
+</html>

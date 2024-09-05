@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <title>TIC</title>
+</head>
+<body>
+
+<nav class="navb" id="navb">
+        <a href="index-log.html"><img src="assets/tick-logo.png" alt="logo" class="tick-logo"></a>
+        <ul class="nav-ul" id="nav-ul">
+            <li class="nav-li "><a href="events.html">الأقسام</a></li>
+            <li class="nav-li "><a href="knowUs.html">تعرف علينا</a></li>
+            <li class="nav-li "><a href="contactUs.html">تواصل معنا</a></li>
+            <a class="lang" href="">EN</a>
+        </ul>
+
+        <form action="" class="search-bar">
+            <input type="text" placeholder="ابحث هنا ....">
+            <button class="search-btn" type="submit"><img src="assets/search-icon.png"></button>
+        </form>
+
+        <form class="sell-btn" onclick="showSellForm()">
+        <i class="fa fa-ticket" style="padding-left:10px"></i>
+        <input type="button" value="بيع تذكرت" >
+        </form>
+        <div class="user">
+            <img src="assets/person-icon.png" alt="">
+            <p>محمد محمود</p>
+            <i class="fa-solid fa-caret-down fa-xl" id="ic" style="color: #ffffff;  margin-right: 0px; cursor: pointer; z-index: 2;"  onclick="changeIcon(this.id)"></i>
+        </div>
+        <div class="d-menu">
+        <form class="menu-inner" onclick="window.location.href='myAcc.html';">
+            <i class="fa-solid fa-user fa-xl" style="color: #ED8A19;"></i>
+            <p style="color: #ED8A19;">حسابي</p>
+            <i class="fa-solid fa-chevron-left fa-xl" style="color: #ED8A19;"></i>
+        </form>
+
+        <form class="menu-inner" onclick="window.location.href='myTickets.html';">
+        <i class="fa-solid fa-ticket fa-xl" style="color: #5F22D9;"></i>
+        <p style="color: #5F22D9;">تذاكري</p>
+        <i class="fa-solid fa-chevron-left fa-xl" style="color: #5F22D9;"></i>
+        </form>
+
+        <form class="menu-inner" onclick="window.location.href='myWallet.html';">
+        <i class="fa-solid fa-wallet fa-xl" style="color: #47B574;"></i>
+        <p style="color: #47B574;">محفظتي</p>
+        <i class="fa-solid fa-chevron-left fa-xl" style="color: #47B574;"></i>
+        </form>
+        <input type="button" value="تسجيل الخروج" style="cursor: pointer; " window.location.href='index.html';>
+        </div>
+</nav>
+<nav class="navb-m">
+    <a href="index.html"><img src="assets/tick-logo.png" alt="logo" class="tick-logo"></a>
+    <form action="" class="search-bar">
+        <input type="text" placeholder="ابحث هنا ....">
+        <button class="search-btn" type="submit"><img src="assets/search-icon.png"></button>
+    </form>
+    <i class="fa-solid fa-bars fa-xl" style="color: #AD72FE;" onclick="showNavbM()"></i>
+</nav>
+<div class="navb-m-ol">
+    <div style="display: flex; flex-direction: row; margin:64px auto 100px auto; align-items: center; height:50px; gap: 20px;">
+    <i class="fa-solid fa-x fa-xl" style="color: #c92b28; margin-left: 30px;" onclick="closeNavbM()"></i>
+    <div class="user">
+        <img src="assets/person-icon.png" alt="">
+        <p>محمد محمود</p>
+        <i class="fa-solid fa-caret-down fa-xl" id="ic2" style="color: #5F22D9; margin-right: 0px; cursor: pointer; z-index: 2;"  onclick="changeIcon(this.id)"></i>
+    </div>
+    <div class="d-menu">
+    <form class="menu-inner" onclick="window.location.href='myAcc.html';">
+        <i class="fa-solid fa-user fa-xl" style="color: #ED8A19;"></i>
+        <p style="color: #ED8A19;">حسابي</p>
+        <i class="fa-solid fa-chevron-left fa-xl" style="color: #ED8A19;"></i>
+    </form>
+
+    <form class="menu-inner" onclick="window.location.href='myTickets.html';">
+    <i class="fa-solid fa-ticket fa-xl" style="color: #5F22D9;"></i>
+    <p style="color: #5F22D9;">تذاكري</p>
+    <i class="fa-solid fa-chevron-left fa-xl" style="color: #5F22D9;"></i>
+    </form>
+
+    <form class="menu-inner" onclick="window.location.href='myWallet.html';">
+    <i class="fa-solid fa-wallet fa-xl" style="color: #47B574;"></i>
+    <p style="color: #47B574;">محفظتي</p>
+    <i class="fa-solid fa-chevron-left fa-xl" style="color: #47B574;"></i>
+    </form>
+    <input type="button" value="تسجيل الخروج" style="cursor: pointer; " window.location.href='index.html';>
+    </div>
+    </div>
+    <ul class="nav-ul" id="nav-ul" >
+        <li class="nav-li "><a href="events.html">الأقسام</a></li>
+        <li class="nav-li "><a href="knowUs.html">تعرف علينا</a></li>
+        <li class="nav-li "><a href="contactUs.html">تواصل معنا</a></li>
+        <a class="lang" href="#">EN</a>
+        <form class="sell-btn" onclick="showSellForm()">
+            <i class="fa fa-ticket" style="padding-left:10px"></i>
+            <input type="button" value="بيع تذكرت" >
+            </form>
+    </ul>
+</div>
+
+
+<div class="overlay" onclick="closeModal()"></div>
+<div class="overlay2" onclick="closeDiv()"></div>
+<div class="overlay3" onclick="overlay3()"></div>
+<div class="overlay5" onclick="overlay5()"></div>
+
+
+
+<div class="sell-form">
+    <input type="text" value="SELL" style="background-color: #5F22D9; color: #ffffff; border: none; border-radius:50px;font-size: 50px; text-align:center;font-weight:  600;width: 130px; height: 50px; margin-bottom: 70px;">
+    <p style="font-size: 26.7px;font-weight: 600; margin-bottom: 30px;">بيع تذكرتك</p>
+    <p style="font-size: 13.6px; color: #707070; margin-bottom: 60px;">اختر الفعاليه الي عايز تبيع التذكرةالخاصه بيها</p>
+    <form action="" class="login-info">
+    <div class="login-field" style="margin-bottom: 60px; width: 528px;">        
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 23.808 23.808">
+            <g id="Layer_1" transform="translate(-1.132 -1)">
+              <path id="Path_89" data-name="Path 89" d="M5.068,22.078H5.045v.053L1.132,31.463,18.355,24.24l-10-10Zm5.946,4.161-1.989.834V16.316l1.989,1.989Zm.995-6.94L14,21.29v3.7l-1.989.834ZM8.029,27.491l-1.989.834V22.332l1.989-4.744ZM5.045,24.7v4.039L2.99,29.6Zm9.947-.132V22.284L16.6,23.9Z" transform="translate(0 -6.655)" fill="#5b5b5b"/>
+              <path id="Path_90" data-name="Path 90" d="M24.989,9a1.989,1.989,0,1,0,1.989,1.989A1.991,1.991,0,0,0,24.989,9Zm0,2.984a.995.995,0,1,1,.995-.995A1,1,0,0,1,24.989,11.984Z" transform="translate(-10.992 -4.021)" fill="#5b5b5b"/>
+              <path id="Path_91" data-name="Path 91" d="M42.989,1a1.989,1.989,0,1,0,1.989,1.989A1.991,1.991,0,0,0,42.989,1Zm0,2.984a.995.995,0,1,1,.995-.995A1,1,0,0,1,42.989,3.984Z" transform="translate(-20.039)" fill="#5b5b5b"/>
+              <path id="Path_92" data-name="Path 92" d="M37.989,17a1.989,1.989,0,1,0,1.989,1.989A1.991,1.991,0,0,0,37.989,17Zm0,2.984a.995.995,0,1,1,.995-.995A1,1,0,0,1,37.989,19.984Z" transform="translate(-17.526 -8.042)" fill="#5b5b5b"/>
+              <path id="Path_93" data-name="Path 93" d="M35.808,29.333l.7.7a3.546,3.546,0,0,1,5.009,0l.7-.7A4.541,4.541,0,0,0,35.808,29.333Z" transform="translate(-17.429 -13.574)" fill="#5b5b5b"/>
+              <path id="Path_94" data-name="Path 94" d="M18,9.731a3.485,3.485,0,0,0,0-4.923l-.7.7a2.49,2.49,0,0,1,0,3.517Z" transform="translate(-8.123 -1.914)" fill="#5b5b5b"/>
+              <path id="Path_95" data-name="Path 95" d="M35,7.722A4.724,4.724,0,0,0,35,1.05l-.7.7a3.728,3.728,0,0,1,0,5.266Z" transform="translate(-16.668 -0.025)" fill="#5b5b5b"/>
+              <rect id="Rectangle_8454" data-name="Rectangle 8454" width="1" height="1" transform="translate(14.97 9.97)" fill="#5b5b5b"/>
+              <rect id="Rectangle_8455" data-name="Rectangle 8455" width="1" transform="translate(21.97 6.97)" fill="#5b5b5b"/>
+              <rect id="Rectangle_8456" data-name="Rectangle 8456" width="1" height="1" transform="translate(12.97 1.97)" fill="#5b5b5b"/>
+            </g>
+        </svg>
+
+
+        <select name="" id="" style="width:100%; border: none; color: #9C9C9C; font-size: 19.5px; font-weight: 500; margin-right: 19px; ">
+            <option value="" disabled selected>اختر الفعالية</option>
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">5</option>
+        </select>
+        
+    </div>
+    <input  type="button" value="استمر" style="padding:17px 250px 17px 240px; color: #ffff;background-color: #5F22D9; border: none; border-radius: 8px; font-size: 17px;font-weight: 600; cursor: pointer;">
+    </form>
+</div>
+
+<div class="pass-reset">
+    <img src="assets/icons8-protect.gif" alt="" width="50px" height="50px">
+    <h1 style="font-size: 26.7px; font-weight: 600; margin-bottom: 30px;">اعادة تعيين كلمة المرور</h1>
+    <p style="font-size: 13.6px; color: #707070; width: 35%; text-align: center; margin-bottom: 30px;">قم بتعيين كلمة مرور مختلفة عن الكلمة السابقة حتي لا تنساها مره أخري</p>
+    <form action="" class="login-info">
+
+        <div class="login-field" style="margin:40px 0px 40px 0px; width: 528px;">        
+            <img src="assets/lock.png">
+            <input type="password" id="pwd1" name="pwd1" placeholder="كلمة المرور" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+            <button type="button" onclick="myFunction('pwd1','eyeicon1')"><i class="fa-regular fa-eye fa-xl" style="color: #9C9C9C;" id="eyeicon1" ></i></button>
+        </div>
+        <div class="login-field" style="margin-bottom: 40px; width: 528px;">        
+            <img src="assets/lock.png">
+            <input type="password" id="pwd2" name="pwd1" placeholder="تأكيد كلمة المرور" required>
+            <button type="button" onclick="myFunction('pwd2','eyeicon2')"><i class="fa-regular fa-eye fa-xl" style="color: #9C9C9C;" id="eyeicon2"></i></button>
+        </div>
+
+    <input class="login-btn" type="submit"  style="width: 532px; margin-bottom: 35px;" onclick="showResetConf()" value="تاكيد كلمة المرور الجديدة">
+    </form>
+</div>
+
+<div class="reset-conf">
+    <img src="assets/successfully-done.gif" alt="" style="margin-bottom: 35px;  width: 108px; height: 108px;">
+    <h1 style="font-size: 26.7px; font-weight: 600; margin-bottom: 30px;">تم اعادة تعيين كلمة المرور</h1>
+    <p style="font-size: 13.6px; color: #707070; width: 30%; text-align: center; margin-bottom: 46px; line-height: 22px;">كلمة المرور الجديدة تم تاكيدها بنجاح  يمكنك الان استخدامها لتسجيل الدخول</p>
+    <form action="" class="login-info">
+    <input class="login-btn" type="button"  style="width: 532px; margin-bottom: 36px;" onclick="showModal()" value="تسجيل الدخول">
+    </form>
+</div>
+
+
+
+
+
+<div class="ticket-cont" >
+<h1 style="font-size: 26.7px; font-weight: 600; margin-bottom: 36px;">حسابي</h1>
+
+    <div class="ac" style="display: flex; margin-bottom: 50px;list-style: none; width: auto;">
+        <a class="ac-item is-active" active-color="#5F22D9" onclick="dBlock('myTickets')">المعلومات الشخصية</a>
+        <a class="ac-item" active-color="#5F22D9" onclick="dBlock('myTickets1')">حسابك البنكي</a>
+        <span class="ac-indicator"></span>
+    </div>
+
+<div style="display: flex;">
+<div class="myTickets">
+<div style="display: flex;flex-direction: column;">
+
+    <div style="display: flex; gap: 32px;">
+    <img src="assets/person-icon.png" alt="" style="width: 100px; height: 100px; border-radius: 10px;">
+    <div style="display: flex; flex-direction: column; gap: 30px; justify-content: space-between;">
+    <p style="font-size: 26.7px; font-weight: 600;">محمد محمود</p>
+    <p style="font-size: 13.6px; font-weight: bold;color: #707070;">Mahmoudahmed@gmail.com</p>
+    </div>
+    </div>
+    <input type="button" value="تغير الصورة الشخصية" style=" padding: 14px; height: 48px;width: 214px; margin-top: 46px; background: none; border: 1px solid #D83F87; border-radius: 10px; color: #D83F87; font-size: 16.5px; font-weight: 600;">
+    <div style="display: flex; margin-top: 53px; gap: 28px; align-items: center;">
+        <p style="font-size: 22.2px; color: #707070;">بيانات الحساب</p>
+        <div style="border: 1px solid #E4E4E4; width: 86%; height: 1px;"></div>
+    </div>
+    <form action="" class="login-info" style="align-items: flex-start; margin-top: 71px; width: 49%;">
+    <div class="login-field" style="margin-bottom: 40px; width: 648px;">        
+        <svg xmlns="http://www.w3.org/2000/svg" width="28.754" height="36.127" viewBox="0 0 28.754 36.127" style="margin-left: 10px;">
+            <g id="Layer_2" data-name="Layer 2" transform="translate(0.005 0.01)">
+              <g id="Layer_1" data-name="Layer 1" transform="translate(-0.005 -0.01)">
+                <path id="Path_12" data-name="Path 12" d="M19.163,32H9.581C4.288,32,0,35.776,0,40.435v7.027a1.37,1.37,0,0,0,.768,1.29,1.787,1.787,0,0,0,1.655,0,1.37,1.37,0,0,0,.768-1.29V40.435c.007-3.1,2.864-5.619,6.39-5.625h9.583c3.527.006,6.384,2.521,6.39,5.625v7.027a1.37,1.37,0,0,0,.768,1.29,1.787,1.787,0,0,0,1.655,0,1.37,1.37,0,0,0,.768-1.29V40.435C28.746,35.776,24.456,32,19.163,32Z" transform="translate(0.005 -12.829)" fill="#5b5b5b"/>
+                <path id="Path_13" data-name="Path 13" d="M18.654,15.969A7.99,7.99,0,1,0,10.67,7.98a7.99,7.99,0,0,0,7.984,7.99Zm0-12.781A4.791,4.791,0,1,1,13.862,7.98a4.791,4.791,0,0,1,4.791-4.791Z" transform="translate(-4.277 0.01)" fill="#5b5b5b"/>
+              </g>
+            </g>
+          </svg>
+          
+        <input type="name" id="name" name="name" placeholder="الاسم الكامل">
+    </div>
+    <div class="login-field" style="margin-bottom: 40px; width: 648px;">        
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 28 24" style="margin-left: 10px;">
+            <path id="Path_5" data-name="Path 5" d="M25,4H7A5,5,0,0,0,2,9V23a5,5,0,0,0,5,5H25a5,5,0,0,0,5-5V9A5,5,0,0,0,25,4ZM7,6H25a3,3,0,0,1,2.4,1.22h-.08L18,15.79a3,3,0,0,1-4.06,0L4.68,7.26H4.6A3,3,0,0,1,7,6ZM25,26H7a3,3,0,0,1-3-3V9.36l8.62,7.9a5,5,0,0,0,6.76,0L28,9.36V23a3,3,0,0,1-3,3Z" transform="translate(-2 -4)" fill="#5b5b5b"/>
+          </svg>
+          
+    <input type="email" id="email1" name="email" placeholder="البريد الالكتروني">
+    </div>
+    <div class="login-field" style="margin-bottom: 40px; width: 648px;">        
+        <svg xmlns="http://www.w3.org/2000/svg" width="26.002" height="26.049" viewBox="0 0 26.002 26.049" style="margin-left: 10px;">
+            <path id="phone_3" data-name="phone 3" d="M2.113,20v3.62a2.413,2.413,0,0,0,2.631,2.413,23.881,23.881,0,0,0,10.414-3.7,23.531,23.531,0,0,0,7.24-7.24A23.88,23.88,0,0,0,26.1,4.631,2.413,2.413,0,0,0,23.7,2h-3.62a2.413,2.413,0,0,0-2.413,2.076,15.494,15.494,0,0,1-.845,3.391,2.413,2.413,0,0,0,.543,2.546L18.9,11.545a19.307,19.307,0,0,1-7.24,7.24l-1.533-1.532a2.413,2.413,0,0,0-2.546-.543,15.5,15.5,0,0,1-3.391.845A2.413,2.413,0,0,0,2.113,20Z" transform="translate(-1.111 -1)" fill="none" stroke="#5b5b5b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </svg>
+          
+        <input type="text" id="phone" name="phone" placeholder="رقم الجوال">
+    </div>
+    <div class="select-cs" style="width: 648px; margin-bottom: 100px;">
+        <div class="select-C" style="width: 50%;">
+            <i class="fa-solid fa-earth-americas fa-xl" style="color: #5b5b5b;"></i>
+            <select id="country" style="width: 230px;">
+                <option>اختر الدولة</option>
+            </select>
+        </div>
+
+        <div class="select-S" style="width: 50%;">
+            <i class="fa-solid fa-location-dot fa-xl" style="color: #5b5b5b;"></i>
+            <select id="state" style="width: 230px;">
+                <option>اختر المدينة</option>
+            </select>
+        </div>
+    </div>
+    <input type="button" value="حفظ التعديلات" style="height: 55px; width: 80%; margin: auto; margin-bottom: 25px; font-size: 17px; font-weight: 600; color: #ffff; border-radius: 8px; background-color: #5F22D9; border: none;">
+    <input type="button" value="تغير كلمة المرور" onclick="showPassReset()" style="height: 55px; width: 80%; margin: auto; font-size: 17px; font-weight: 600; color: #D83F87; border-radius: 8px; border: 1px solid #D83F87; background: none;">
+</form>
+</div>
+
+</div>
+
+<div class="myTickets1 dbn">
+    <form class="bank-form" action="" style="width: 49%;display: flex; flex-direction: column;">
+    <div class="login-field" style="margin-bottom: 60px; width: 648px;">        
+        <svg id="back" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path id="Path_518" data-name="Path 518" d="M0,0H24V24H0Z" fill="none"/>
+            <path id="Path_519" data-name="Path 519" d="M2,20H22v2H2Zm2-8H6v7H4Zm5,0h2v7H9Zm4,0h2v7H13Zm5,0h2v7H18ZM2,7,12,2,22,7v4H2ZM4,8.236V9H20V8.236l-8-4ZM12,8a1,1,0,1,1,1-1A1,1,0,0,1,12,8Z" fill="#5b5b5b"/>
+        </svg>
+        <select name="" id="" class="sbn" style="width:100%; border: none; color: #9C9C9C; font-size: 19.5px; font-weight: 500; margin-right: 10px;">
+            <option value="" disabled selected>اسم البنك</option>
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">5</option>
+        </select>
+    </div>
+    <div class="login-field" style="margin-bottom: 40px; width: 648px;">        
+        <svg id="Page-1" xmlns="http://www.w3.org/2000/svg" width="23.334" height="23.334" viewBox="0 0 23.334 23.334" style="margin-left: 10px;">
+  <g id="Dribbble-Light-Preview">
+    <g id="icons">
+      <path id="number_sign-_110_" data-name="number_sign-[#110]" d="M334.75,7575.583h5.833v-5.833H334.75Zm14.584-5.833v-2.917H343.5V7561h-2.917v5.834H334.75V7561h-2.917v5.834H326v2.917h5.833v5.833H326v2.917h5.833v5.833h2.917V7578.5h5.833v5.833H343.5V7578.5h5.833v-2.917H343.5v-5.833Z" transform="translate(-326 -7561)" fill="#5b5b5b" fill-rule="evenodd"/>
+    </g>
+  </g>
+        </svg>
+        <input type="text" id="cardNum" name="phone" placeholder="رقم الحساب">
+    </div>
+    <input type="button" value="حفظ التعديلات" style="height: 55px; width: 80%; margin: 60px auto auto auto;  margin-bottom: 25px; font-size: 17px; font-weight: 600; color: #ffff; border-radius: 8px; background-color: #5F22D9; border: none;">
+    </form>
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<footer> 
+    <div class="footer"> 
+    <div class="footer-R">
+    <img style="width:64px; height:48px; margin-bottom: 20px;" src="assets/tick-logo.png">
+    <h5 style="color: #D83F87; font-size: 26.7px; font-weight: 600;">تك هب</h5>
+    <h5 style="color: #9C9C9C;  font-size: 26.7px; font-weight: 600; margin-bottom: 114px;">اختيارك الأول الامن والمضمون</h5>
+    <ul>
+        <li><img src="assets/facebook.png"></li>
+        <li><img src="assets/telegram.png" alt=""></li>
+        <li><img src="assets/twitter.png" alt=""></li>
+        <li><img src="assets/wt-icon.png" alt=""></li>
+    </ul>
+    </div>
+
+    <div class="footer-L">
+        <h5 style="font-size: 26.7px;font-weight: 600; color: #9C9C9C; margin-bottom: 36px;">لمتابعة اخر عروضنا واخبارنا</h5>
+        <h6 style="font-size: 22.2px;font-weight:500 ; color: #707070;margin-bottom: 56px; width: 411px;">قم ادخل بريدك الالكتروني لتكون اول من يعرف عروضنا أخبارنا بشكل حصري</h6>
+
+        <form class="email-bar">
+            <i class="fa-regular fa-envelope fa-2xl" style="border: none;padding: 5px;padding-top: 7px; margin-left: 10px;"></i>
+            <input type="email" placeholder="بريدك الالكتروني">
+            <button class="email-btn"><i class="fa-solid fa-arrow-left fa-xl"></i></button>
+        </form>
+
+    </div>
+
+</div>
+<div class="copy-rights">
+    <ul>
+        <li>جميع الحقوق محفوظة @</li>
+        <li onclick="window.location.href='termCond.html';" style="cursor: pointer;">الشروط والاحكام</li>
+        <li onclick="window.location.href='privacy.html';" style="cursor: pointer;">الخصوصية</li>
+    </ul>
+
+    <a href="#navb" style="width: 64px; height: 64px;"><i class="fa-solid fa-arrow-up fa-2xl" style="color: green;"></i></a>
+    
+</div>
+</footer>
+
+
+
+
+
+<script src="js/country-states.js"></script>
+<script>
+var user_country_code = "";
+
+(() => {
+  // script https://www.html-code-generator.com/html/drop-down/state-name
+
+  // Get the country name and state name from the imported script.
+  const country_array = country_and_states.country;
+  const states_array = country_and_states.states;
+  
+  const id_state_option = document.getElementById("state");
+  const id_country_option = document.getElementById("country");
+
+  const createCountryNamesDropdown = () => {
+      let option =  '';
+      option += '<option value="" ">اختر الدولة</option>';
+
+      for(let country_code in country_array){
+          // set selected option user country
+          let selected = (country_code == user_country_code) ? ' selected' : '';
+          option += '<option value="'+country_code+'"'+selected+'>'+country_array[country_code]+'</option>';
+      }
+      id_country_option.innerHTML = option;
+  };
+
+  const createStatesNamesDropdown = () => {
+      let selected_country_code = id_country_option.value;
+      // get state names
+      let state_names = states_array[selected_country_code];
+
+      // if invalid country code
+      if(!state_names){
+          id_state_option.innerHTML = '<option>اختر المدينة</option>';
+          return;
+      }
+      let option = '';
+      option += '<select id="state">';
+      option += '<option>اختر المدينة</option>';
+      for (let i = 0; i < state_names.length; i++) {
+          option += '<option value="'+state_names[i].code+'">'+state_names[i].name+'</option>';
+      }
+      option += '</select>';
+      id_state_option.innerHTML = option;
+  };
+
+  // country select change event
+  id_country_option.addEventListener('change', createStatesNamesDropdown);
+
+  createCountryNamesDropdown();
+  createStatesNamesDropdown();
+})();
+</script>
+<script>
+const indicator3 = document.querySelector('.ac-indicator');
+const items1 = document.querySelectorAll('.ac-item');
+    
+    function handleIndicator(el) {
+      items1.forEach(item => {
+        item.classList.remove('is-active');
+        item.removeAttribute('style');
+      });
+    
+      indicator3.style.width = `${el.offsetWidth}px`;
+      indicator3.style.left = `${el.offsetLeft}px`;
+      indicator3.style.backgroundColor = el.getAttribute('active-color');
+    
+      el.classList.add('is-active');
+      el.style.color = el.getAttribute('active-color');
+    }
+    
+    
+    items1.forEach((item, index) => {
+      item.addEventListener('click', e => {handleIndicator(e.target);});
+      item.classList.contains('is-active') && handleIndicator(item);
+    });
+</script>
+<script>
+let incrementButton = document.getElementById("increment");
+let decrementButton = document.getElementById("decrement");
+let counter = document.getElementById("counter");
+let count = 0;
+
+incrementButton.addEventListener("click", function () {
+  count++;
+  counter.textContent = count;
+  updateStyles(count);
+});
+
+decrementButton.addEventListener("click", () => {
+  count--;
+  counter.textContent = count;
+  updateStyles(count);
+});
+
+function updateStyles(count) {
+  if (count < 0) {
+    counter.classList.add("negative");
+  } else if (count > 0) {
+    counter.classList.add("positive");
+  } else {
+    counter.className = "";
+  }
+}
+</script>
+<script src="https://kit.fontawesome.com/c6b51c86ab.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/app.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/script2.js"></script>
+<script type="text/javascript" src="js/slider1.js"></script>
+<script src="js/slider2.js"></script>
+<script src="js/owlSlider.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+
+
+
+</body>
+</html>
